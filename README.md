@@ -10,6 +10,6 @@ How to test this dataset :
     psql -d qwat -f 201600302_plain_qwat.backup
 
 - now open the qgis project **qwat.qgs** from the main qwat repository (https://github.com/qwat/QWAT/tree/master/qgis-project)
-and you should see this screen after loading qgis.qgs
+and you should see this screen:
 
 ![qwat-demo](qgis.png)
