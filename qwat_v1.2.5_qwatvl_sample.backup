@@ -1,0 +1,1302 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.6.1
+-- Dumped by pg_dump version 9.6.1
+
+-- Started on 2017-04-14 13:44:53 UTC
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET search_path = qwat_vl, pg_catalog;
+
+--
+-- TOC entry 4459 (class 0 OID 33284)
+-- Dependencies: 302
+-- Data for Name: bedding; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY bedding (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+9701	t	\N	\N	\N	aucun	none	lipsă	\N	\N	\N
+9702	t	\N	\N	\N	béton	concrete	beton	\N	\N	\N
+9703	t	\N	\N	\N	géotextile	geotextile	geotextil	\N	\N	\N
+9704	t	\N	\N	\N	gravier	gravle	pietriş	\N	\N	\N
+9706	t	\N	\N	\N	sable	sand	nisip	\N	\N	\N
+9707	t	\N	\N	\N	terre	soil	pământ	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4438 (class 0 OID 32999)
+-- Dependencies: 273
+-- Data for Name: cistern; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY cistern (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+2101	t	\N	\N	\N	circulaire	circular	circulară	\N	\N	\N
+2102	t	\N	\N	\N	rectangulaire	rectangular	dreptunghiulară	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4460 (class 0 OID 33291)
+-- Dependencies: 303
+-- Data for Name: cover_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY cover_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+9801	t	\N	\N	\N	couvercle acier	steel cover	capac oţel	\N	\N	\N
+9802	t	\N	\N	\N	couvercle béton	concrete cover	capac beton	\N	\N	\N
+9803	t	\N	\N	\N	couvercle plastique	plastic cover	capac plastic	\N	\N	\N
+9804	t	\N	\N	\N	couvercle fonte	cast-iron cover	capac fontă	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4429 (class 0 OID 32929)
+-- Dependencies: 264
+-- Data for Name: hydrant_material; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY hydrant_material (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, pressure_nominal) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+7002	t	F 65	CI 65	F 65	Fonte 65	Cast iron 65	Fontă 65	\N	\N	\N	16
+7003	t	F 80	CI 80	F 80	Fonte 80	Cast iron 80	Fontă 80	\N	\N	\N	16
+7004	t	F 100	CI 100	F 100	Fonte 100	Cast iron 100	Fontă 100	\N	\N	\N	16
+\.
+
+
+--
+-- TOC entry 4430 (class 0 OID 32936)
+-- Dependencies: 265
+-- Data for Name: hydrant_model_inf; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY hydrant_model_inf (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+7301	t	\N	\N	\N	Hawle	\N	\N	\N	\N	\N
+7302	t	\N	\N	\N	Hawle_H4	\N	\N	\N	\N	\N
+7303	t	\N	\N	\N	Hinni	\N	\N	\N	\N	\N
+7304	t	\N	\N	\N	Hinni_Standard	\N	\N	\N	\N	\N
+7305	t	\N	\N	\N	Hinri_Double_fermeture	\N	\N	\N	\N	\N
+7306	t	\N	\N	\N	VonRoll	\N	\N	\N	\N	\N
+7307	t	\N	\N	\N	VonRoll_4105_Mod_1896	\N	\N	\N	\N	\N
+7308	t	\N	\N	\N	VonRoll_4107_Mod_1935	\N	\N	\N	\N	\N
+7309	t	\N	\N	\N	VonRolI_7500	\N	\N	\N	\N	\N
+7310	t	\N	\N	\N	VonRoll_5500	\N	\N	\N	\N	\N
+7311	t	\N	\N	\N	VonRoll_fix	\N	\N	\N	\N	\N
+7312	t	\N	\N	\N	VonFloll_reglable	\N	\N	\N	\N	\N
+7313	t	\N	\N	\N	VonRoll_vario	\N	\N	\N	\N	\N
+7314	t	\N	\N	\N	VonRoll_ufFix	\N	\N	\N	\N	\N
+7315	t	\N	\N	\N	VonRoll_varial	\N	\N	\N	\N	\N
+7316	t	\N	\N	\N	VonRoll_1955	\N	\N	\N	\N	\N
+7317	t	\N	\N	\N	VonRoll_1989_5000	\N	\N	\N	\N	\N
+7318	t	\N	\N	\N	VonRoll_2007_5000	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4431 (class 0 OID 32943)
+-- Dependencies: 266
+-- Data for Name: hydrant_model_sup; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY hydrant_model_sup (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+7201	t	\N	\N	\N	Hawle	\N	\N	\N	\N	\N
+7202	t	\N	\N	\N	Hawle_H4	\N	\N	\N	\N	\N
+7203	t	\N	\N	\N	Hinni	\N	\N	\N	\N	\N
+7204	t	\N	\N	\N	Hinni_6000	\N	\N	\N	\N	\N
+7205	t	\N	\N	\N	Hinni_6006	\N	\N	\N	\N	\N
+7206	t	\N	\N	\N	VonRoll	\N	\N	\N	\N	\N
+7207	t	\N	\N	\N	VonRoll_4105_Mod_1896	\N	\N	\N	\N	\N
+7208	t	\N	\N	\N	VonRoll_4107_Mod_1935	\N	\N	\N	\N	\N
+7209	t	\N	\N	\N	VonRoll_7500_Mod_1955	\N	\N	\N	\N	\N
+7210	t	\N	\N	\N	VonRoll_7502_Mod_1970	\N	\N	\N	\N	\N
+7211	t	\N	\N	\N	VonRoll_Hy_classic_Serie_5500	\N	\N	\N	\N	\N
+7212	t	\N	\N	\N	VonRoll_Hy_plus_Serie_5700	\N	\N	\N	\N	\N
+7213	t	\N	\N	\N	VonRoll_Hy_5000s_Serie_5400_Cobra	\N	\N	\N	\N	\N
+7214	t	\N	\N	\N	VonRoll_Hy_deco_Mod_1896_Nostalgie	\N	\N	\N	\N	\N
+7215	t	\N	\N	\N	VonRoll_Hytec_5601	\N	\N	\N	\N	\N
+7216	t	\N	\N	\N	VonRoll_Hytec_5602	\N	\N	\N	\N	\N
+7217	t	\N	\N	\N	VonRoll_Hytec_5603	\N	\N	\N	\N	\N
+7218	t	\N	\N	\N	VonRoll_Hytec_5607	\N	\N	\N	\N	\N
+7219	t	\N	\N	\N	VonRoll_5000_Mod_1989	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4432 (class 0 OID 32950)
+-- Dependencies: 267
+-- Data for Name: hydrant_output; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY hydrant_output (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+7401	t	\N	\N	\N	1x75	\N	\N	\N	\N	\N
+7402	t	\N	\N	\N	2x75	\N	\N	\N	\N	\N
+7403	t	\N	\N	\N	3x75	\N	\N	\N	\N	\N
+7404	t	\N	\N	\N	2x55	\N	\N	\N	\N	\N
+7405	t	\N	\N	\N	1x55_1x75	\N	\N	\N	\N	\N
+7406	t	\N	\N	\N	2x55_1x75	\N	\N	\N	\N	\N
+7407	t	\N	\N	\N	2x55_1x100	\N	\N	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4433 (class 0 OID 32957)
+-- Dependencies: 268
+-- Data for Name: hydrant_provider; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY hydrant_provider (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+7101	t	\N	\N	\N	+GF+	+GF+	+GF+	\N	\N	\N
+7102	t	\N	\N	\N	Wild	Wild	Wild	\N	\N	\N
+7103	t	\N	\N	\N	Hawie	Hawie	Hawie	\N	\N	\N
+7104	t	\N	\N	\N	Erhard	Erhard	Erhard	\N	\N	\N
+7105	t	\N	\N	\N	SISTAG	SISTAG	SISTAG	\N	\N	\N
+7106	t	\N	\N	\N	Von Roll	Von Roll	Von Roll	\N	\N	\N
+7107	t	\N	\N	\N	Straub	Straub	Straub	\N	\N	\N
+7108	t	\N	\N	\N	Hinni	Hinni	Hinni	\N	\N	\N
+7109	t	\N	\N	\N	AVK	AVK	AVK	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4452 (class 0 OID 33109)
+-- Dependencies: 287
+-- Data for Name: leak_cause; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY leak_cause (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+9101	t	\N	\N	\N	cassure franche	\N	spărtură normală	\N	\N	\N
+9102	t	\N	\N	\N	cassure longitudinale	\N	spărtură longitudinală	\N	\N	\N
+9103	t	\N	\N	\N	conduite arrachée	\N	conductă smulsă	\N	\N	\N
+9104	t	\N	\N	\N	corrosion	\N	coroziune	\N	\N	\N
+9105	t	\N	\N	\N	raccordement non étanche	\N	racordare neetanșă	\N	\N	\N
+9106	t	\N	\N	\N	pièce non étanche	\N	piesă neetanșă	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4461 (class 0 OID 33298)
+-- Dependencies: 304
+-- Data for Name: locationtype; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY locationtype (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+9601	t	\N	\N	\N	aucun	none	niciunul	\N	\N	\N
+9604	t	\N	\N	\N	trottoir	sidewalk	trotuar	\N	\N	\N
+9605	t	\N	\N	\N	carrossable	carriageable	carosabil	\N	\N	\N
+9606	t	\N	\N	\N	pavés	cubic street stones	piatră cubică	\N	\N	\N
+9607	t	\N	\N	\N	gravier	gravle	pietriş	\N	\N	\N
+9608	t	\N	\N	\N	sable	sand	nisip	\N	\N	\N
+9609	t	\N	\N	\N	terre	soil	pământ	\N	\N	\N
+9610	t	\N	\N	\N	béton	concrete	beton	\N	\N	\N
+9611	t	\N	\N	\N	espace vert	open space	spaţiu verde	\N	\N	\N
+9612	t	\N	\N	\N	asphalte	asphalt	asfalt	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4434 (class 0 OID 32964)
+-- Dependencies: 269
+-- Data for Name: object_reference; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY object_reference (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+9001	t	\N	\N	\N	radier	apron	radier	\N	\N	\N
+9002	t	\N	\N	\N	sol	ground	sol	\N	\N	\N
+9003	t	\N	\N	\N	conduite	pipe	conductă	\N	\N	\N
+9004	t	\N	\N	\N	dessus	on top	deasupra	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4439 (class 0 OID 33006)
+-- Dependencies: 274
+-- Data for Name: overflow; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY overflow (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+2201	t	\N	\N	\N	en décharge	dumped	aruncată	\N	\N	\N
+2202	t	\N	\N	\N	récupéré	collected	recuperată	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4453 (class 0 OID 33126)
+-- Dependencies: 288
+-- Data for Name: part_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY part_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+9200	t	\N	\N	\N	compteur abonné		apometru abonat	\N	\N	\N
+9201	t	\N	\N	\N	bouchon		dop	\N	\N	\N
+9202	t	\N	\N	\N	bouche d'arrosage		gură de stropire/pulverizare	\N	\N	\N
+9203	t	\N	\N	\N		tee fitting	fiting tip T	\N	\N	\N
+9204	t	\N	\N	\N		elbow fitting	cot	\N	\N	\N
+9205	t	\N	\N	\N		end fitting	capăt reţea	\N	\N	\N
+9206	t	\N	\N	\N		reduction fitting	fiting reductor	\N	\N	\N
+9207	t	\N	\N	\N		cross fitting	fiting tip cruce	\N	\N	\N
+9208	t	\N	\N	\N		unknown fitting	fiting nedeterminat	\N	\N	\N
+9209	t	\N	\N	\N	manomètre	manometer	manometru	\N	\N	\N
+9210	t	\N	\N	\N	débitmètre	flow meter	debitmetru	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4448 (class 0 OID 33074)
+-- Dependencies: 283
+-- Data for Name: pipe_function; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pipe_function (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, schema_visible, major, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	t	t	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	t	t	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	t	t	\N
+4101	t	\N	\N	\N	Conduite de transport	\N	Conductă de transport	\N	\N	\N	t	t	2
+4102	t	\N	\N	\N	Conduite d'hydrant	\N	Conductă de hidrant	\N	\N	\N	f	t	0
+4103	t	\N	\N	\N	Conduite de vidange	\N	Conductă de golire	\N	\N	\N	f	f	4
+4105	t	\N	\N	\N	Conduite de distribution	\N	Conductă de distribuţie	\N	\N	\N	t	t	2
+4106	t	\N	\N	\N	Branchement commun	\N	Branşament comun	\N	\N	\N	f	f	3
+4107	t	\N	\N	\N	By-pass	\N	By-pass	\N	\N	\N	f	f	2
+4108	t	\N	\N	\N	Branchement privé	\N	Branşament privat	\N	\N	\N	f	f	3
+4109	t	\N	\N	\N	Conduite de haute pression	\N	Conductă de înaltă presiune	\N	\N	\N	t	t	2
+4110	t	\N	\N	\N	Drain captant	\N	Captare dren	\N	\N	\N	f	f	1
+4111	t	\N	\N	\N	Trop plein	\N	Prea plin	\N	\N	\N	t	t	4
+4112	t	\N	\N	\N	Ventilation	\N	Aerisire	\N	\N	\N	f	f	4
+\.
+
+
+--
+-- TOC entry 4449 (class 0 OID 33083)
+-- Dependencies: 284
+-- Data for Name: pipe_installmethod; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pipe_installmethod (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+4201	t	\N	\N	\N	En fouille	\N	Excavare	\N	\N	\N
+4202	t	\N	\N	\N	Chemisé	\N	Cămăşuire	\N	\N	\N
+4203	t	\N	\N	\N	Air libre	\N	Aer liber	\N	\N	\N
+4204	t	\N	\N	\N	Sous pont	\N	Sub pod	\N	\N	\N
+4205	t	\N	\N	\N	Protégé	\N	Protejată	\N	\N	\N
+4206	t	\N	\N	\N	Bétoné	\N	Betonată	\N	\N	\N
+4207	t	\N	\N	\N	Galerie	\N	Galerie	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4450 (class 0 OID 33090)
+-- Dependencies: 285
+-- Data for Name: pipe_material; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pipe_material (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, _displayname_fr, _displayname_en, _displayname_ro, diameter, diameter_nominal, diameter_internal, diameter_external, code_sire, pressure_nominal, sdr, wall_thickness, sn) FROM stdin;
+101	t	Autre	Other	Altul	Autre	Other	Altul	\N	\N	\N	Autre	Other	Altul	\N	\N	\N	\N	1	\N	\N	\N	\N
+102	t	Inc.	Unknown	Nec.	Inconnu	Unknown	Necunoscut	\N	\N	\N	Inc.	Unknown	Nec.	\N	\N	\N	\N	1	\N	\N	\N	\N
+103	t	à dét.	To determ.	De det.	à déterminer	To be determined	De determinat	\N	\N	\N	à dét.	To determ.	De det.	\N	\N	\N	\N	1	\N	\N	\N	\N
+5508	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 25 PN16	 25 PN16	PE 25 PN16	25	20	20.400	25.000	10	16	11	2.3	\N
+5509	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN16	 250 PN16	PE 250 PN16	250	200	204.600	250.000	10	16	11	22.7	\N
+5510	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 32 PN16	 32 PN16	PE 32 PN16	32	25	26.200	32.000	10	16	11	2.9	\N
+5511	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN16	 355 PN16	PE 355 PN16	355	300	290.600	355.000	10	16	11	32.2	\N
+5512	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN16	 40 PN16	PE 40 PN16	40	32	32.600	40.000	10	16	11	3.7	\N
+5513	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN16	 400 PN16	PE 400 PN16	400	325	327.200	400.000	10	16	11	36.4	\N
+5514	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN16	 50 PN16	PE 50 PN16	50	40	40.800	50.000	10	16	11	4.6	\N
+5515	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN16	 63 PN16	PE 63 PN16	63	50	51.400	63.000	10	16	11	5.8	\N
+5516	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN16	 75 PN16	PE 75 PN16	75	60	61.400	75.000	10	16	11	6.8	\N
+5517	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN16	 90 PN16	PE 90 PN16	90	75	73.600	90.000	10	16	11	8.2	\N
+5518	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN16	 140 PN16	PE 140 PN16	140	\N	114.600	140.000	10	16	11	12.7	\N
+5519	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN16	 180 PN16	PE 180 PN16	180	\N	147.200	180.000	10	16	11	16.4	\N
+5520	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN16	 225 PN16	PE 225 PN16	225	\N	184.000	225.000	10	16	11	20.5	\N
+5521	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN16	 315 PN16	PE 315 PN16	315	\N	257.800	315.000	10	16	11	28.6	\N
+5522	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 500 PN16	 500 PN16	PE 500 PN16	500	\N	409.200	500.000	10	16	11	45.4	\N
+5523	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 630 PN16	 630 PN16	PE 630 PN16	630	\N	515.600	600.000	10	16	11	57.2	\N
+5524	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN16	 450 PN16	PE 450 PN16	450	\N	368.200	450.000	10	16	11	40.9	\N
+5525	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 560 PN16	 560 PN16	PE 560 PN16	560	\N	458.400	560.000	10	16	11	50.8	\N
+7013	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN20	 200 PN20	PE 200 PN20	200	\N	155.200	200.000	10	20	9	22.4	\N
+7014	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN20	 225 PN20	PE 225 PN20	225	\N	174.600	225.000	10	20	9	25.2	\N
+7015	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN20	 250 PN20	PE 250 PN20	250	\N	194.200	250.000	10	20	9	27.9	\N
+7016	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN20	 280 PN20	PE 280 PN20	280	\N	217.400	280.000	10	20	9	31.3	\N
+7017	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN20	 315 PN20	PE 315 PN20	315	\N	244.600	315.000	10	20	9	35.2	\N
+7018	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN20	 355 PN20	PE 355 PN20	355	\N	275.600	355.000	10	20	9	39.7	\N
+7019	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN20	 400 PN20	PE 400 PN20	400	\N	310.600	400.000	10	20	9	44.7	\N
+7020	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN20	 450 PN20	PE 450 PN20	450	\N	349.400	450.000	10	20	9	50.3	\N
+7021	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 500 PN20	 500 PN20	PE 500 PN20	500	\N	388.400	500.000	10	20	9	55.8	\N
+7022	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 560 PN20	 560 PN20	PE 560 PN20	560	\N	435.600	560.000	10	20	9	62.2	\N
+7023	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 25 PN25	 25 PN25	PE 25 PN25	25	\N	18.000	25.000	10	25	7.40000000000000036	3.5	\N
+7024	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 32 PN25	 32 PN25	PE 32 PN25	32	\N	23.200	32.000	10	25	7.40000000000000036	4.4	\N
+7025	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN25	 40 PN25	PE 40 PN25	40	\N	29.000	40.000	10	25	7.40000000000000036	5.5	\N
+7026	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN25	 50 PN25	PE 50 PN25	50	\N	36.200	50.000	10	25	7.40000000000000036	6.9	\N
+7027	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN25	 63 PN25	PE 63 PN25	63	\N	45.800	63.000	10	25	7.40000000000000036	8.6	\N
+7028	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN25	 75 PN25	PE 75 PN25	75	\N	54.400	75.000	10	25	7.40000000000000036	10.3	\N
+7029	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN25	 90 PN25	PE 90 PN25	90	\N	65.400	90.000	10	25	7.40000000000000036	12.3	\N
+7033	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 25 PN8	 25 PN8	PE 25 PN8	25	\N	21.000	25.000	10	8	21	2.0	\N
+7034	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 32 PN8	 32 PN8	PE 32 PN8	32	\N	28.000	32.000	10	8	21	2.0	\N
+7035	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN8	 40 PN8	PE 40 PN8	40	\N	36.000	40.000	10	8	21	2.0	\N
+7045	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 710 PN12.5	 710 PN12.5	PE 710 PN12.5	710	\N	605.600	710.000	10	12.5	13.5999999999999996	52.2	\N
+7046	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 25 PN10	 25 PN10	PE 25 PN10	25	\N	21.000	25.000	10	10	17	2.0	\N
+7047	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 32 PN10	 32 PN10	PE 32 PN10	32	\N	28.000	32.000	10	10	17	2.0	\N
+5504	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN16	 125 PN16	PE 125 PN16	125	100	102.200	125.000	10	16	11	11.4	\N
+5506	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN16	 160 PN16	PE 160 PN16	160	125	130.800	160.000	10	16	11	14.6	\N
+5507	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN16	 200 PN16	PE 200 PN16	200	160	163.600	200.000	10	16	11	18.2	\N
+5526	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 710 PN16	 710 PN16	PE 710 PN16	710	\N	581.000	710.000	10	16	11	64.5	\N
+5527	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN16	 280 PN16	PE 280 PN16	280	\N	229.200	280.000	10	16	11	25.4	\N
+5501	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE		PE	\N	\N	\N	\N	10	\N	\N	\N	\N
+7001	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 25 PN20	 25 PN20	PE 25 PN20	25	\N	19.400	25.000	10	20	9	2.8	\N
+7002	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 32 PN20	 32 PN20	PE 32 PN20	32	\N	24.800	32.000	10	20	9	3.6	\N
+7003	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN20	 40 PN20	PE 40 PN20	40	\N	31.000	40.000	10	20	9	4.5	\N
+7004	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN20	 50 PN20	PE 50 PN20	50	\N	38.800	50.000	10	20	9	5.6	\N
+7005	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN20	 63 PN20	PE 63 PN20	63	\N	48.800	63.000	10	20	9	7.1	\N
+7006	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN20	 75 PN20	PE 75 PN20	75	\N	58.200	75.000	10	20	9	8.4	\N
+5503	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN16	 110 PN16	PE 110 PN16	110	90	90.000	110.000	10	16	11	10.0	\N
+7007	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN20	 90 PN20	PE 90 PN20	90	\N	69.800	90.000	10	20	9	10.1	\N
+7008	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN20	 110 PN20	PE 110 PN20	110	\N	85.400	110.000	10	20	9	12.3	\N
+7009	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN20	 125 PN20	PE 125 PN20	125	\N	97.000	125.000	10	20	9	14.0	\N
+7010	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN20	 140 PN20	PE 140 PN20	140	\N	108.600	140.000	10	20	9	15.7	\N
+7011	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN20	 160 PN20	PE 160 PN20	160	\N	124.200	160.000	10	20	9	17.9	\N
+7012	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN20	 180 PN20	PE 180 PN20	180	\N	139.800	180.000	10	20	9	20.1	\N
+7040	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 25 PN12.5	 25 PN12.5	PE 25 PN12.5	25	\N	21.000	25.000	10	12.5	13.5999999999999996	2.0	\N
+7041	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN12.5	 450 PN12.5	PE 450 PN12.5	450	\N	383.800	450.000	10	12.5	13.5999999999999996	33.1	\N
+5550	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80		PE80	\N	\N	\N	\N	8	\N	\N	\N	\N
+5551	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 50 PN16	 50 PN16	PE80 50 PN16	50	\N	38.800	50.000	8	16	9	5.6	\N
+5552	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 63 PN16	 63 PN16	PE80 63 PN16	63	\N	48.800	63.000	8	16	9	7.1	\N
+7042	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 500 PN12.5	 500 PN12.5	PE 500 PN12.5	500	\N	426.400	500.000	10	12.5	13.5999999999999996	36.8	\N
+7043	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 560 PN12.5	 560 PN12.5	PE 560 PN12.5	560	\N	477.600	560.000	10	12.5	13.5999999999999996	41.2	\N
+7044	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 630 PN12.5	 630 PN12.5	PE 630 PN12.5	630	\N	537.400	630.000	10	12.5	13.5999999999999996	46.3	\N
+5372	t	F		F	Fonte		Fontă	\N	\N	\N	F 800	 800	F 800	800	800	800.000	\N	4	\N	\N	\N	\N
+5373	t	F		F	Fonte		Fontă	\N	\N	\N	F 90	 90	F 90	90	90	90.000	\N	4	\N	\N	\N	\N
+5400	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE			\N	\N	\N	\N	4	\N	\N	\N	\N
+5401	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 100	 100	 100	100	100	100.000	\N	4	\N	\N	\N	\N
+5402	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 125	 125	 125	125	125	125.000	\N	4	\N	\N	\N	\N
+5403	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 150	 150	 150	150	150	150.000	\N	4	\N	\N	\N	\N
+5404	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 200	 200	 200	200	200	200.000	\N	4	\N	\N	\N	\N
+5405	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 250	 250	 250	250	250	250.000	\N	4	\N	\N	\N	\N
+5406	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 300	 300	 300	300	300	300.000	\N	4	\N	\N	\N	\N
+5407	t	FAE			Fonte auto-étanche			\N	\N	\N	FAE 400	 400	 400	400	400	400.000	\N	4	\N	\N	\N	\N
+5600	t	PEX		PEX	Polyéthylène réticulé		Polietilenă reticulată	\N	\N	\N	PEX		PEX	\N	\N	\N	\N	10	\N	\N	\N	\N
+5601	t	PEX		PEX	Polyéthylène réticulé		Polietilenă reticulată	\N	\N	\N	PEX 63	 63	PEX 63	63	50	50.000	63.000	10	\N	\N	\N	\N
+5602	t	PEX		PEX	Polyéthylène réticulé		Polietilenă reticulată	\N	\N	\N	PEX 90	 90	PEX 90	90	75	75.000	90.000	10	\N	\N	\N	\N
+5603	t	PEX		PEX	Polyéthylène réticulé		Polietilenă reticulată	\N	\N	\N	PEX 160	 160	PEX 160	160	\N	\N	160.000	10	\N	\N	\N	\N
+5651	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL		PL	\N	\N	\N	\N	0	\N	\N	\N	\N
+5652	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 0.2	 0.2	PL 0.2	0.2	\N	\N	20.000	0	\N	\N	\N	\N
+5653	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 0.75"	 0.75"	PL 0.75"	0.75"	20	20.400	25.000	0	\N	\N	\N	\N
+5101	t	AC		OL	Acier		Oţel	\N	\N	\N	AC		OL	\N	\N	\N	\N	11	\N	\N	\N	\N
+5102	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 100	 100	OL 100	100	100	100.000	114.000	11	\N	\N	\N	\N
+5104	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 125	 125	OL 125	125	125	125.000	140.000	11	\N	\N	\N	\N
+5105	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 150	 150	OL 150	150	150	150.000	168.000	11	\N	\N	\N	\N
+5106	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 175	 175	OL 175	175	175	175.000	194.000	11	\N	\N	\N	\N
+5108	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 200	 200	OL 200	200	200	200.000	219.000	11	\N	\N	\N	\N
+5109	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 250	 250	OL 250	250	250	250.000	273.000	11	\N	\N	\N	\N
+5110	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 300	 300	OL 300	300	300	300.000	323.000	11	\N	\N	\N	\N
+5111	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 400	 400	OL 400	400	400	400.000	406.400	11	\N	\N	\N	\N
+5112	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 50	 50	OL 50	50	50	50.000	60.300	11	\N	\N	\N	\N
+5113	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 500	 500	OL 500	500	500	500.000	508.000	11	\N	\N	\N	\N
+5115	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 600	 600	OL 600	600	600	600.000	610.000	11	\N	\N	\N	\N
+5116	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 65	 65	OL 65	65	65	65.000	76.000	11	\N	\N	\N	\N
+5119	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 80	 80	OL 80	80	80	80.000	89.000	11	\N	\N	\N	\N
+5120	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 800	 800	OL 800	800	800	800.000	\N	11	\N	\N	\N	\N
+5121	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 1000	 1000	OL 1000	1000	1000	1000.000	\N	11	\N	\N	\N	\N
+5122	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 1200	 1200	OL 1200	1200	1200	1200.000	\N	11	\N	\N	\N	\N
+5123	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 350	 350	OL 350	350	350	350.000	355.000	11	\N	\N	\N	\N
+5124	t	AC		OL	Acier		Oţel	\N	\N	\N	AC 1.5"	 1.5"	OL 1.5"	1.5"	40	40.000	48.000	11	\N	\N	\N	\N
+5151	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG		OLG	\N	\N	\N	\N	11	\N	\N	\N	\N
+5152	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 0.5"	 0.5"	OLG 0.5"	0.5"	15	16.000	\N	11	\N	\N	\N	\N
+5153	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 0.75"	 0.75"	OLG 0.75"	0.75"	20	21.600	\N	11	\N	\N	\N	\N
+5155	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 1"	 1"	OLG 1"	1"	25	27.200	\N	11	\N	\N	\N	\N
+5156	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 100	 100	OLG 100	100	100	105.300	\N	11	\N	\N	\N	\N
+5157	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 1.25"	 1.25"	OLG 1.25"	1.25"	32	35.900	\N	11	\N	\N	\N	\N
+5158	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 1.5"	 1.5"	OLG 1.5"	1.5"	40	41.800	\N	11	\N	\N	\N	\N
+5159	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 2"	 2"	OLG 2"	2"	50	53.000	\N	11	\N	\N	\N	\N
+5160	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 2.5"	 2.5"	OLG 2.5"	2.5"	70	68.800	\N	11	\N	\N	\N	\N
+5170	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 3"	 3"	OLG 3"	3"	80	80.800	\N	11	\N	\N	\N	\N
+5171	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 4"	 4"	OLG 4"	4"	100	105.300	\N	11	\N	\N	\N	\N
+5172	t	ACG		OLG	Acier galvanisé		Oţel Galvanizat	\N	\N	\N	ACG 80	 80	OLG 80	80	80	80.800	\N	11	\N	\N	\N	\N
+5201	t	ACI		OLI	Acier inoxydable		Oţel Inoxidabil	\N	\N	\N	ACI 100	 100	OLI 100	100	100	100.000	\N	11	\N	\N	\N	\N
+5202	t	ACI		OLI	Acier inoxydable		Oţel Inoxidabil	\N	\N	\N	ACI 125	 125	OLI 125	125	125	125.000	\N	11	\N	\N	\N	\N
+5203	t	ACI		OLI	Acier inoxydable		Oţel Inoxidabil	\N	\N	\N	ACI 150	 150	OLI 150	150	150	150.000	\N	11	\N	\N	\N	\N
+5204	t	ACI		OLI	Acier inoxydable		Oţel Inoxidabil	\N	\N	\N	ACI 200	 200	OLI 200	200	200	200.000	\N	11	\N	\N	\N	\N
+5205	t	ACI		OLI	Acier inoxydable		Oţel Inoxidabil	\N	\N	\N	ACI 250	 250	OLI 250	250	250	250.000	\N	11	\N	\N	\N	\N
+5251	t	ACPR			Acier prestolic			\N	\N	\N	ACPR			\N	\N	\N	\N	11	\N	\N	\N	\N
+5252	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 100	 100	 100	100	100	100.000	\N	11	\N	\N	\N	\N
+5253	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 125	 125	 125	125	125	125.000	\N	11	\N	\N	\N	\N
+5254	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 150	 150	 150	150	150	150.000	\N	11	\N	\N	\N	\N
+5255	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 200	 200	 200	200	200	200.000	\N	11	\N	\N	\N	\N
+5256	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 300	 300	 300	300	300	300.000	\N	11	\N	\N	\N	\N
+5257	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 50	 50	 50	50	50	50.000	\N	11	\N	\N	\N	\N
+5258	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 60	 60	 60	60	60	60.000	\N	11	\N	\N	\N	\N
+5259	t	ACPR			Acier prestolic			\N	\N	\N	ACPR 80	 80	 80	80	80	80.000	\N	11	\N	\N	\N	\N
+5301	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU		CU	\N	\N	\N	\N	0	\N	\N	\N	\N
+5302	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 1"	 1"	CU 1"	1"	25	25.000	28.000	0	\N	\N	\N	\N
+5303	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 10	 10	CU 10	10	10	10.000	12.000	0	\N	\N	\N	\N
+5304	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 12	 12	CU 12	12	10	10.000	12.000	0	\N	\N	\N	\N
+5305	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 1.25"	 1.25"	CU 1.25"	1.25"	32	32.000	35.000	0	\N	\N	\N	\N
+5306	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 15	 15	CU 15	15	13	13.000	15.000	0	\N	\N	\N	\N
+5307	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 17	 17	CU 17	17	15	16.000	18.000	0	\N	\N	\N	\N
+5308	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 22/19	 22/19	CU 22/19	22/19	20	20.000	22.000	0	\N	\N	\N	\N
+5309	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 25	 25	CU 25	25	25	25.000	28.000	0	\N	\N	\N	\N
+5310	t	CU		CU	Cuivre		Cupru	\N	\N	\N	CU 32	 32	CU 32	32	32	32.000	35.000	0	\N	\N	\N	\N
+5351	t	F		F	Fonte		Fontă	\N	\N	\N	F		F	\N	\N	\N	\N	4	\N	\N	\N	\N
+5352	t	F		F	Fonte		Fontă	\N	\N	\N	F 100	 100	F 100	100	100	100.000	\N	4	\N	\N	\N	\N
+5353	t	F		F	Fonte		Fontă	\N	\N	\N	F 110	 110	F 110	110	110	110.000	\N	4	\N	\N	\N	\N
+5354	t	F		F	Fonte		Fontă	\N	\N	\N	F 120	 120	F 120	120	120	120.000	\N	4	\N	\N	\N	\N
+5355	t	F		F	Fonte		Fontă	\N	\N	\N	F 125	 125	F 125	125	125	125.000	\N	4	\N	\N	\N	\N
+5356	t	F		F	Fonte		Fontă	\N	\N	\N	F 150	 150	F 150	150	150	150.000	\N	4	\N	\N	\N	\N
+5357	t	F		F	Fonte		Fontă	\N	\N	\N	F 175	 175	F 175	175	175	175.000	\N	4	\N	\N	\N	\N
+5358	t	F		F	Fonte		Fontă	\N	\N	\N	F 180	 180	F 180	180	180	180.000	\N	4	\N	\N	\N	\N
+5359	t	F		F	Fonte		Fontă	\N	\N	\N	F 200	 200	F 200	200	200	200.000	\N	4	\N	\N	\N	\N
+5360	t	F		F	Fonte		Fontă	\N	\N	\N	F 250	 250	F 250	250	250	250.000	\N	4	\N	\N	\N	\N
+5361	t	F		F	Fonte		Fontă	\N	\N	\N	F 300	 300	F 300	300	300	300.000	\N	4	\N	\N	\N	\N
+5362	t	F		F	Fonte		Fontă	\N	\N	\N	F 350	 350	F 350	350	350	350.000	\N	4	\N	\N	\N	\N
+5363	t	F		F	Fonte		Fontă	\N	\N	\N	F 375	 375	F 375	375	375	375.000	\N	4	\N	\N	\N	\N
+5364	t	F		F	Fonte		Fontă	\N	\N	\N	F 400	 400	F 400	400	400	400.000	\N	4	\N	\N	\N	\N
+5365	t	F		F	Fonte		Fontă	\N	\N	\N	F 50	 50	F 50	50	50	50.000	\N	4	\N	\N	\N	\N
+5366	t	F		F	Fonte		Fontă	\N	\N	\N	F 500	 500	F 500	500	500	500.000	\N	4	\N	\N	\N	\N
+5367	t	F		F	Fonte		Fontă	\N	\N	\N	F 60	 60	F 60	60	60	60.000	\N	4	\N	\N	\N	\N
+5368	t	F		F	Fonte		Fontă	\N	\N	\N	F 600	 600	F 600	600	600	600.000	\N	4	\N	\N	\N	\N
+5369	t	F		F	Fonte		Fontă	\N	\N	\N	F 65	 65	F 65	65	65	65.000	\N	4	\N	\N	\N	\N
+5370	t	F		F	Fonte		Fontă	\N	\N	\N	F 70	 70	F 70	70	70	70.000	\N	4	\N	\N	\N	\N
+5371	t	F		F	Fonte		Fontă	\N	\N	\N	F 80	 80	F 80	80	80	80.000	\N	4	\N	\N	\N	\N
+7048	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN10	 40 PN10	PE 40 PN10	40	\N	35.200	40.000	10	10	17	2.4	\N
+7049	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN10	 50 PN10	PE 50 PN10	50	\N	44.000	50.000	10	10	17	3.0	\N
+7050	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN10	 63 PN10	PE 63 PN10	63	\N	55.400	63.000	10	10	17	3.8	\N
+7051	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN10	 75 PN10	PE 75 PN10	75	\N	66.000	75.000	10	10	17	4.5	\N
+7052	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN10	 90 PN10	PE 90 PN10	90	\N	79.200	90.000	10	10	17	5.4	\N
+7053	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN10	 110 PN10	PE 110 PN10	110	\N	96.800	110.000	10	10	17	6.6	\N
+7054	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN10	 125 PN10	PE 125 PN10	125	\N	110.200	125.000	10	10	17	7.4	\N
+7055	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN10	 140 PN10	PE 140 PN10	140	\N	123.400	140.000	10	10	17	8.3	\N
+7056	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN10	 160 PN10	PE 160 PN10	160	\N	141.000	160.000	10	10	17	9.5	\N
+7057	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN10	 180 PN10	PE 180 PN10	180	\N	158.600	180.000	10	10	17	10.7	\N
+7058	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN10	 200 PN10	PE 200 PN10	200	\N	176.200	200.000	10	10	17	11.9	\N
+7059	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN10	 225 PN10	PE 225 PN10	225	\N	198.200	225.000	10	10	17	13.4	\N
+7060	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN10	 250 PN10	PE 250 PN10	250	\N	220.400	250.000	10	10	17	14.8	\N
+7061	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN10	 280 PN10	PE 280 PN10	280	\N	246.800	280.000	10	10	17	16.6	\N
+7062	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN10	 315 PN10	PE 315 PN10	315	\N	277.600	315.000	10	10	17	18.7	\N
+7063	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN10	 355 PN10	PE 355 PN10	355	\N	312.800	355.000	10	10	17	21.1	\N
+7064	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN10	 400 PN10	PE 400 PN10	400	\N	352.600	400.000	10	10	17	23.7	\N
+7065	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN10	 450 PN10	PE 450 PN10	450	\N	396.600	450.000	10	10	17	26.7	\N
+7066	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 500 PN10	 500 PN10	PE 500 PN10	500	\N	440.600	500.000	10	10	17	29.7	\N
+7067	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 560 PN10	 560 PN10	PE 560 PN10	560	\N	493.600	560.000	10	10	17	33.2	\N
+5654	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 1"	 1"	PL 1"	1"	32	32.600	40.000	0	\N	\N	\N	\N
+5655	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 1.25"	 1.25"	PL 1.25"	1.25"	40	40.800	50.000	0	\N	\N	\N	\N
+5656	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 1.5"	 1.5"	PL 1.5"	1.5"	50	51.400	63.000	0	\N	\N	\N	\N
+5657	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 2"	 2"	PL 2"	2"	60	61.400	75.000	0	\N	\N	\N	\N
+5658	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 20	 20	PL 20	20	15	16.000	20.000	0	\N	\N	\N	\N
+5659	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 25	 25	PL 25	25	20	20.400	25.000	0	\N	\N	\N	\N
+5660	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 2.5"	 2.5"	PL 2.5"	2.5"	75	73.600	90.000	0	\N	\N	\N	\N
+5661	t	PL		PL	Plastique		Plastic	\N	\N	\N	PL 32	 32	PL 32	32	25	26.200	32.000	0	\N	\N	\N	\N
+5700	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC		PVC	\N	\N	\N	\N	6	\N	\N	\N	\N
+5701	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 100	 100	PVC 100	100	\N	\N	100.000	6	\N	\N	\N	\N
+5702	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 120	 120	PVC 120	120	\N	\N	120.000	6	\N	\N	\N	\N
+5703	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 125	 125	PVC 125	125	\N	\N	125.000	6	\N	\N	\N	\N
+5704	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 140	 140	PVC 140	140	125	125.000	140.000	6	\N	\N	\N	\N
+5705	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 150	 150	PVC 150	150	\N	\N	150.000	6	\N	\N	\N	\N
+5706	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 160	 160	PVC 160	160	150	150.000	160.000	6	\N	\N	\N	\N
+5707	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 20	 20	PVC 20	20	15	15.400	20.000	6	\N	\N	\N	\N
+5708	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 250	 250	PVC 250	250	225	225.000	250.000	6	\N	\N	\N	\N
+5709	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 600	 600	PVC 600	600	\N	\N	600.000	6	\N	\N	\N	\N
+5710	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 75	 75	PVC 75	75	65	65.000	75.000	6	\N	\N	\N	\N
+5711	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 63	 63	PVC 63	63	\N	\N	63.000	6	\N	\N	\N	\N
+5712	t	PVC		PVC	Chlorure de polyvinyle		Policlorură de vinil	\N	\N	\N	PVC 110	 110	PVC 110	110	\N	\N	110.000	6	\N	\N	\N	\N
+5751	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 100	 100	AZBO 100	100	100	100.000	125.000	2	\N	\N	\N	\N
+5753	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 125	 125	AZBO 125	125	125	125.000	153.000	2	\N	\N	\N	\N
+5754	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 150	 150	AZBO 150	150	150	150.000	182.000	2	\N	\N	\N	\N
+5756	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 175	 175	AZBO 175	175	175	175.000	\N	2	\N	\N	\N	\N
+5758	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 200	 200	AZBO 200	200	200	200.000	240.000	2	\N	\N	\N	\N
+5759	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 250	 250	AZBO 250	250	250	250.000	300.000	2	\N	\N	\N	\N
+5761	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 300	 300	AZBO 300	300	300	300.000	360.000	2	\N	\N	\N	\N
+5762	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 50	 50	AZBO 50	50	50	50.000	\N	2	\N	\N	\N	\N
+5763	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 80	 80	AZBO 80	80	80	80.000	100.000	2	\N	\N	\N	\N
+5764	t	TAC		AZBO	Amiante Ciment		Azbociment	\N	\N	\N	TAC 600	 600	AZBO 600	600	600	600.000	720.000	2	\N	\N	\N	\N
+5800	t	TC		Cim	Tuyau Ciment		Ciment	\N	\N	\N	TC		Cim	\N	\N	\N	\N	3	\N	\N	\N	\N
+5801	t	TC		Cim	Tuyau Ciment		Ciment	\N	\N	\N	TC 20	 20	Cim 20	20	200	\N	\N	3	\N	\N	\N	\N
+5802	t	TC		Cim	Tuyau Ciment		Ciment	\N	\N	\N	TC 25	 25	Cim 25	25	250	\N	\N	3	\N	\N	\N	\N
+5803	t	TC		Cim	Tuyau Ciment		Ciment	\N	\N	\N	TC 30	 30	Cim 30	30	300	\N	\N	3	\N	\N	\N	\N
+5899	t			PREMO	Béton précontraint		Beton precomprimat	\N	\N	\N			PREMO	\N	\N	\N	\N	\N	\N	\N	\N	\N
+5900	t			PREMO	Béton précontraint		Beton precomprimat	\N	\N	\N	 500	 500	PREMO 500	500	500	\N	\N	\N	\N	\N	\N	\N
+5901	t			PREMO	Béton précontraint		Beton precomprimat	\N	\N	\N	 600	 600	PREMO 600	600	600	\N	\N	\N	\N	\N	\N	\N
+5902	t			PREMO	Béton précontraint		Beton precomprimat	\N	\N	\N	 800	 800	PREMO 800	800	800	\N	\N	\N	\N	\N	\N	\N
+7030	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN8	 63 PN8	PE 63 PN8	63	\N	57.000	63.000	10	8	21	3.0	\N
+7031	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN8	 75 PN8	PE 75 PN8	75	\N	67.800	75.000	10	8	21	3.6	\N
+7032	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN8	 90 PN8	PE 90 PN8	90	\N	81.400	90.000	10	8	21	4.3	\N
+7036	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN8	 50 PN8	PE 50 PN8	50	\N	45.200	50.000	10	8	21	2.4	\N
+7037	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 500 PN6	 500 PN6	PE 500 PN6	500	\N	461.800	500.000	10	6	26	19.1	\N
+7038	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 560 PN6	 560 PN6	PE 560 PN6	560	\N	517.200	560.000	10	6	26	21.4	\N
+7039	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 630 PN6	 630 PN6	PE 630 PN6	630	\N	581.800	630.000	10	6	26	24.1	\N
+7068	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 630 PN10	 630 PN10	PE 630 PN10	630	\N	555.200	630.000	10	10	17	37.4	\N
+7069	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN8	 180 PN8	PE 180 PN8	180	\N	162.800	180.000	10	8	21	8.6	\N
+7070	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN8	 200 PN8	PE 200 PN8	200	\N	180.800	200.000	10	8	21	9.6	\N
+7071	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN8	 225 PN8	PE 225 PN8	225	\N	203.400	225.000	10	8	21	10.8	\N
+7072	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN8	 250 PN8	PE 250 PN8	250	\N	226.200	250.000	10	8	21	11.9	\N
+7073	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN6	 40 PN6	PE 40 PN6	40	\N	36.000	40.000	10	6	26	2.0	\N
+7074	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN6	 315 PN6	PE 315 PN6	315	\N	290.800	315.000	10	6	26	12.1	\N
+7075	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN6	 355 PN6	PE 355 PN6	355	\N	327.800	355.000	10	6	26	13.6	\N
+7076	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN6	 400 PN6	PE 400 PN6	400	\N	369.400	400.000	10	6	26	15.3	\N
+7077	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN6	 450 PN6	PE 450 PN6	450	\N	415.600	450.000	10	6	26	17.2	\N
+7078	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN8	 110 PN8	PE 110 PN8	110	\N	99.400	110.000	10	8	21	5.3	\N
+7079	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN8	 125 PN8	PE 125 PN8	125	\N	113.000	125.000	10	8	21	6.0	\N
+7080	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN8	 140 PN8	PE 140 PN8	140	\N	126.600	140.000	10	8	21	6.7	\N
+7081	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN8	 160 PN8	PE 160 PN8	160	\N	144.600	160.000	10	8	21	7.7	\N
+7082	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN8	 280 PN8	PE 280 PN8	280	\N	253.200	280.000	10	8	21	13.4	\N
+7083	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN8	 315 PN8	PE 315 PN8	315	\N	285.000	315.000	10	8	21	15.0	\N
+7084	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN6	 140 PN6	PE 140 PN6	140	\N	129.200	140.000	10	6	26	5.4	\N
+7085	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN6	 50 PN6	PE 50 PN6	50	\N	46.000	50.000	10	6	26	2.0	\N
+7086	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN6	 63 PN6	PE 63 PN6	63	\N	58.000	63.000	10	6	26	2.5	\N
+7087	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN6	 75 PN6	PE 75 PN6	75	\N	69.200	75.000	10	6	26	2.9	\N
+7088	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN6	 90 PN6	PE 90 PN6	90	\N	83.000	90.000	10	6	26	3.5	\N
+7089	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN6	 110 PN6	PE 110 PN6	110	\N	101.600	110.000	10	6	26	4.2	\N
+7090	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN6	 125 PN6	PE 125 PN6	125	\N	115.400	125.000	10	6	26	4.8	\N
+7091	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN6	 160 PN6	PE 160 PN6	160	\N	147.600	160.000	10	6	26	6.2	\N
+7092	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN6	 180 PN6	PE 180 PN6	180	\N	166.200	180.000	10	6	26	6.9	\N
+7093	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN6	 200 PN6	PE 200 PN6	200	\N	184.600	200.000	10	6	26	7.7	\N
+7094	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN6	 225 PN6	PE 225 PN6	225	\N	207.800	225.000	10	6	26	8.6	\N
+7095	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN6	 250 PN6	PE 250 PN6	250	\N	230.800	250.000	10	6	26	9.6	\N
+7096	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN6	 280 PN6	PE 280 PN6	280	\N	258.600	280.000	10	6	26	10.7	\N
+7097	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 710 PN6	 710 PN6	PE 710 PN6	710	\N	655.600	710.000	10	6	26	27.2	\N
+7098	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN8	 355 PN8	PE 355 PN8	355	\N	321.200	355.000	10	8	21	16.9	\N
+7099	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN8	 400 PN8	PE 400 PN8	400	\N	361.800	400.000	10	8	21	19.1	\N
+7100	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN8	 450 PN8	PE 450 PN8	450	\N	407.000	450.000	10	8	21	21.5	\N
+7101	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 500 PN8	 500 PN8	PE 500 PN8	500	\N	452.200	500.000	10	8	21	23.9	\N
+7102	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 560 PN8	 560 PN8	PE 560 PN8	560	\N	506.600	560.000	10	8	21	26.7	\N
+7103	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 630 PN8	 630 PN8	PE 630 PN8	630	\N	570.000	630.000	10	8	21	30.0	\N
+7104	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 710 PN8	 710 PN8	PE 710 PN8	710	\N	642.200	710.000	10	8	21	33.9	\N
+7105	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN25	 110 PN25	PE 110 PN25	110	\N	79.800	110.000	10	25	7.40000000000000036	15.1	\N
+7106	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN25	 125 PN25	PE 125 PN25	125	\N	90.800	125.000	10	25	7.40000000000000036	17.1	\N
+7107	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN25	 140 PN25	PE 140 PN25	140	\N	101.600	140.000	10	25	7.40000000000000036	19.2	\N
+7108	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN25	 160 PN25	PE 160 PN25	160	\N	116.200	160.000	10	25	7.40000000000000036	21.9	\N
+7109	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN25	 180 PN25	PE 180 PN25	180	\N	130.800	180.000	10	25	7.40000000000000036	24.6	\N
+7110	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN25	 200 PN25	PE 200 PN25	200	\N	145.200	200.000	10	25	7.40000000000000036	27.4	\N
+7111	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN25	 225 PN25	PE 225 PN25	225	\N	163.400	225.000	10	25	7.40000000000000036	30.8	\N
+7112	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN25	 250 PN25	PE 250 PN25	250	\N	181.600	250.000	10	25	7.40000000000000036	34.2	\N
+7113	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN25	 280 PN25	PE 280 PN25	280	\N	203.400	280.000	10	25	7.40000000000000036	38.3	\N
+7114	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN25	 315 PN25	PE 315 PN25	315	\N	228.800	315.000	10	25	7.40000000000000036	43.1	\N
+7115	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN25	 355 PN25	PE 355 PN25	355	\N	258.000	355.000	10	25	7.40000000000000036	48.5	\N
+7116	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN25	 400 PN25	PE 400 PN25	400	\N	290.600	400.000	10	25	7.40000000000000036	54.7	\N
+7117	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 450 PN25	 450 PN25	PE 450 PN25	450	\N	327.000	450.000	10	25	7.40000000000000036	61.5	\N
+7118	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 710 PN10	 710 PN10	PE 710 PN10	710	\N	625.800	710.000	10	10	17	42.1	\N
+7119	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 140 PN12.5	 140 PN12.5	PE 140 PN12.5	140	\N	119.400	140.000	10	12.5	13.5999999999999996	10.3	\N
+7120	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 160 PN12.5	 160 PN12.5	PE 160 PN12.5	160	\N	136.600	160.000	10	12.5	13.5999999999999996	11.7	\N
+7121	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 180 PN12.5	 180 PN12.5	PE 180 PN12.5	180	\N	153.400	180.000	10	12.5	13.5999999999999996	13.3	\N
+7122	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 200 PN12.5	 200 PN12.5	PE 200 PN12.5	200	\N	170.600	200.000	10	12.5	13.5999999999999996	14.7	\N
+7123	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 225 PN12.5	 225 PN12.5	PE 225 PN12.5	225	\N	191.800	225.000	10	12.5	13.5999999999999996	16.6	\N
+7124	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 250 PN12.5	 250 PN12.5	PE 250 PN12.5	250	\N	213.200	250.000	10	12.5	13.5999999999999996	18.4	\N
+7125	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 280 PN12.5	 280 PN12.5	PE 280 PN12.5	280	\N	238.800	280.000	10	12.5	13.5999999999999996	20.6	\N
+7126	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 315 PN12.5	 315 PN12.5	PE 315 PN12.5	315	\N	268.600	315.000	10	12.5	13.5999999999999996	23.2	\N
+7127	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 355 PN12.5	 355 PN12.5	PE 355 PN12.5	355	\N	302.800	355.000	10	12.5	13.5999999999999996	26.1	\N
+7128	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 400 PN12.5	 400 PN12.5	PE 400 PN12.5	400	\N	341.200	400.000	10	12.5	13.5999999999999996	29.4	\N
+7129	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 40 PN12.5	 40 PN12.5	PE 40 PN12.5	40	\N	34.000	40.000	10	12.5	13.5999999999999996	3.0	\N
+7130	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 32 PN12.5	 32 PN12.5	PE 32 PN12.5	32	\N	27.200	32.000	10	12.5	13.5999999999999996	2.4	\N
+7131	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 50 PN12.5	 50 PN12.5	PE 50 PN12.5	50	\N	42.600	50.000	10	12.5	13.5999999999999996	3.7	\N
+7132	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 63 PN12.5	 63 PN12.5	PE 63 PN12.5	63	\N	53.600	63.000	10	12.5	13.5999999999999996	4.7	\N
+7133	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 75 PN12.5	 75 PN12.5	PE 75 PN12.5	75	\N	63.800	75.000	10	12.5	13.5999999999999996	5.6	\N
+7134	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 90 PN12.5	 90 PN12.5	PE 90 PN12.5	90	\N	76.600	90.000	10	12.5	13.5999999999999996	6.7	\N
+7135	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 110 PN12.5	 110 PN12.5	PE 110 PN12.5	110	\N	93.800	110.000	10	12.5	13.5999999999999996	8.1	\N
+7136	t	PE		PE	Polyéthylène 100		Polietilenă 100	\N	\N	\N	PE 125 PN12.5	 125 PN12.5	PE 125 PN12.5	125	\N	106.600	125.000	10	12.5	13.5999999999999996	9.2	\N
+7501	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 32 PN8	 32 PN8	PE80 32 PN8	32	\N	28.000	32.000	8	8	17	2.0	\N
+7502	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 500 PN10	 500 PN10	PE80 500 PN10	500	\N	426.400	500.000	8	10	13.5999999999999996	36.8	\N
+7503	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 560 PN10	 560 PN10	PE80 560 PN10	560	\N	477.600	560.000	8	10	13.5999999999999996	41.2	\N
+7504	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 630 PN10	 630 PN10	PE80 630 PN10	630	\N	537.400	630.000	8	10	13.5999999999999996	46.3	\N
+7505	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 710 PN10	 710 PN10	PE80 710 PN10	710	\N	605.600	710.000	8	10	13.5999999999999996	52.2	\N
+7506	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 500 PN12.5	 500 PN12.5	PE80 500 PN12.5	500	\N	409.200	500.000	8	12.5	11	45.4	\N
+7507	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 560 PN12.5	 560 PN12.5	PE80 560 PN12.5	560	\N	458.400	560.000	8	12.5	11	50.8	\N
+7508	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 630 PN12.5	 630 PN12.5	PE80 630 PN12.5	630	\N	515.600	630.000	8	12.5	11	57.2	\N
+7509	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 40 PN12.5	 40 PN12.5	PE80 40 PN12.5	40	\N	32.600	40.000	8	12.5	11	3.7	\N
+7510	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 50 PN12.5	 50 PN12.5	PE80 50 PN12.5	50	\N	40.800	50.000	8	12.5	11	4.6	\N
+7511	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 63 PN12.5	 63 PN12.5	PE80 63 PN12.5	63	\N	51.400	63.000	8	12.5	11	5.8	\N
+7512	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 75 PN12.5	 75 PN12.5	PE80 75 PN12.5	75	\N	61.400	75.000	8	12.5	11	6.8	\N
+7513	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 90 PN12.5	 90 PN12.5	PE80 90 PN12.5	90	\N	73.600	90.000	8	12.5	11	8.2	\N
+7514	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 110 PN12.5	 110 PN12.5	PE80 110 PN12.5	110	\N	90.000	110.000	8	12.5	11	10.0	\N
+7515	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 125 PN12.5	 125 PN12.5	PE80 125 PN12.5	125	\N	102.200	125.000	8	12.5	11	11.4	\N
+7516	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 140 PN12.5	 140 PN12.5	PE80 140 PN12.5	140	\N	114.600	140.000	8	12.5	11	12.7	\N
+7517	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 160 PN12.5	 160 PN12.5	PE80 160 PN12.5	160	\N	130.800	160.000	8	12.5	11	14.6	\N
+7518	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 180 PN12.5	 180 PN12.5	PE80 180 PN12.5	180	\N	147.200	180.000	8	12.5	11	16.4	\N
+7519	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 200 PN12.5	 200 PN12.5	PE80 200 PN12.5	200	\N	163.600	200.000	8	12.5	11	18.2	\N
+7520	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 225 PN12.5	 225 PN12.5	PE80 225 PN12.5	225	\N	184.000	225.000	8	12.5	11	20.5	\N
+7521	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 250 PN12.5	 250 PN12.5	PE80 250 PN12.5	250	\N	204.600	250.000	8	12.5	11	22.7	\N
+7522	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 280 PN12.5	 280 PN12.5	PE80 280 PN12.5	280	\N	229.200	280.000	8	12.5	11	25.4	\N
+7523	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 315 PN12.5	 315 PN12.5	PE80 315 PN12.5	315	\N	257.800	315.000	8	12.5	11	28.6	\N
+7524	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 355 PN12.5	 355 PN12.5	PE80 355 PN12.5	355	\N	290.600	355.000	8	12.5	11	32.2	\N
+7525	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 400 PN12.5	 400 PN12.5	PE80 400 PN12.5	400	\N	327.400	400.000	8	12.5	11	36.3	\N
+7526	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 450 PN12.5	 450 PN12.5	PE80 450 PN12.5	450	\N	368.200	450.000	8	12.5	11	40.9	\N
+7527	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 25 PN12.5	 25 PN12.5	PE80 25 PN12.5	25	\N	20.400	25.000	8	12.5	11	2.3	\N
+7528	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 450 PN16	 450 PN16	PE80 450 PN16	450	\N	349.400	450.000	8	16	9	50.3	\N
+7529	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 500 PN16	 500 PN16	PE80 500 PN16	500	\N	388.400	500.000	8	16	9	55.8	\N
+7530	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 315 PN20	 315 PN20	PE80 315 PN20	315	\N	228.800	315.000	8	20	7.40000000000000036	43.1	\N
+7531	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 355 PN20	 355 PN20	PE80 355 PN20	355	\N	258.000	355.000	8	20	7.40000000000000036	48.5	\N
+7532	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 400 PN20	 400 PN20	PE80 400 PN20	400	\N	290.600	400.000	8	20	7.40000000000000036	54.7	\N
+7533	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 32 PN6	 32 PN6	PE80 32 PN6	32	\N	28.000	32.000	8	6	21	2.0	\N
+7534	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 50 PN6	 50 PN6	PE80 50 PN6	50	\N	45.200	50.000	8	6	21	2.4	\N
+7535	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 32 PN12.5	 32 PN12.5	PE80 32 PN12.5	32	\N	26.000	32.000	8	12.5	11	3.0	\N
+7536	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 40 PN20	 40 PN20	PE80 40 PN20	40	\N	29.000	40.000	8	20	7.40000000000000036	5.5	\N
+7537	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 50 PN20	 50 PN20	PE80 50 PN20	50	\N	36.200	50.000	8	20	7.40000000000000036	6.9	\N
+7538	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 63 PN20	 63 PN20	PE80 63 PN20	63	\N	45.800	63.000	8	20	7.40000000000000036	8.6	\N
+7539	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 75 PN20	 75 PN20	PE80 75 PN20	75	\N	54.400	75.000	8	20	7.40000000000000036	10.3	\N
+7540	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 90 PN20	 90 PN20	PE80 90 PN20	90	\N	65.400	90.000	8	20	7.40000000000000036	12.3	\N
+7541	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 110 PN20	 110 PN20	PE80 110 PN20	110	\N	79.800	110.000	8	20	7.40000000000000036	15.1	\N
+7542	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 125 PN20	 125 PN20	PE80 125 PN20	125	\N	90.800	125.000	8	20	7.40000000000000036	17.1	\N
+7543	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 140 PN20	 140 PN20	PE80 140 PN20	140	\N	101.600	140.000	8	20	7.40000000000000036	19.2	\N
+7544	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 160 PN20	 160 PN20	PE80 160 PN20	160	\N	116.200	160.000	8	20	7.40000000000000036	21.9	\N
+7545	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 180 PN20	 180 PN20	PE80 180 PN20	180	\N	130.800	180.000	8	20	7.40000000000000036	24.6	\N
+7546	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 200 PN20	 200 PN20	PE80 200 PN20	200	\N	145.200	200.000	8	20	7.40000000000000036	27.4	\N
+7547	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 225 PN20	 225 PN20	PE80 225 PN20	225	\N	163.400	225.000	8	20	7.40000000000000036	30.8	\N
+7548	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 450 PN20	 450 PN20	PE80 450 PN20	450	\N	327.000	450.000	8	20	7.40000000000000036	61.5	\N
+7549	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 40 PN10	 40 PN10	PE80 40 PN10	40	\N	34.000	40.000	8	10	13.5999999999999996	3.0	\N
+7550	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 50 PN10	 50 PN10	PE80 50 PN10	50	\N	42.600	50.000	8	10	13.5999999999999996	3.7	\N
+7551	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 63 PN10	 63 PN10	PE80 63 PN10	63	\N	53.600	63.000	8	10	13.5999999999999996	4.7	\N
+7552	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 75 PN10	 75 PN10	PE80 75 PN10	75	\N	63.800	75.000	8	10	13.5999999999999996	5.6	\N
+7553	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 25 PN8	 25 PN8	PE80 25 PN8	25	\N	21.000	25.000	8	8	17	2.0	\N
+7554	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 32 PN10	 32 PN10	PE80 32 PN10	32	\N	27.200	32.000	8	10	13.5999999999999996	2.4	\N
+7555	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 90 PN10	 90 PN10	PE80 90 PN10	90	\N	76.600	90.000	8	10	13.5999999999999996	6.7	\N
+7556	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 110 PN10	 110 PN10	PE80 110 PN10	110	\N	93.800	110.000	8	10	13.5999999999999996	8.1	\N
+7557	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 125 PN10	 125 PN10	PE80 125 PN10	125	\N	106.600	125.000	8	10	13.5999999999999996	9.2	\N
+7558	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 140 PN10	 140 PN10	PE80 140 PN10	140	\N	119.400	140.000	8	10	13.5999999999999996	10.3	\N
+7559	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 40 PN8	 40 PN8	PE80 40 PN8	40	\N	35.200	40.000	8	8	17	2.4	\N
+7560	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 160 PN10	 160 PN10	PE80 160 PN10	160	\N	136.400	160.000	8	10	13.5999999999999996	11.8	\N
+7561	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 180 PN10	 180 PN10	PE80 180 PN10	180	\N	153.400	180.000	8	10	13.5999999999999996	13.3	\N
+7562	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 200 PN10	 200 PN10	PE80 200 PN10	200	\N	170.600	200.000	8	10	13.5999999999999996	14.7	\N
+7563	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 225 PN10	 225 PN10	PE80 225 PN10	225	\N	191.800	225.000	8	10	13.5999999999999996	16.6	\N
+7564	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 250 PN10	 250 PN10	PE80 250 PN10	250	\N	213.200	250.000	8	10	13.5999999999999996	18.4	\N
+7565	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 280 PN10	 280 PN10	PE80 280 PN10	280	\N	238.800	280.000	8	10	13.5999999999999996	20.6	\N
+7566	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 315 PN10	 315 PN10	PE80 315 PN10	315	\N	268.600	315.000	8	10	13.5999999999999996	23.2	\N
+7567	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 355 PN10	 355 PN10	PE80 355 PN10	355	\N	302.800	355.000	8	10	13.5999999999999996	26.1	\N
+7568	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 400 PN10	 400 PN10	PE80 400 PN10	400	\N	341.200	400.000	8	10	13.5999999999999996	29.4	\N
+7569	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 450 PN10	 450 PN10	PE80 450 PN10	450	\N	383.800	450.000	8	10	13.5999999999999996	33.1	\N
+7570	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 25 PN10	 25 PN10	PE80 25 PN10	25	\N	21.000	25.000	8	10	13.5999999999999996	2.0	\N
+7571	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 40 PN16	 40 PN16	PE80 40 PN16	40	\N	31.000	40.000	8	16	9	4.5	\N
+7572	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 75 PN16	 75 PN16	PE80 75 PN16	75	\N	58.200	75.000	8	16	9	8.4	\N
+7573	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 90 PN16	 90 PN16	PE80 90 PN16	90	\N	69.800	90.000	8	16	9	10.1	\N
+7574	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 110 PN16	 110 PN16	PE80 110 PN16	110	\N	85.400	110.000	8	16	9	12.3	\N
+7575	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 125 PN16	 125 PN16	PE80 125 PN16	125	\N	97.000	125.000	8	16	9	14.0	\N
+7576	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 140 PN16	 140 PN16	PE80 140 PN16	140	\N	108.600	140.000	8	16	9	15.7	\N
+7577	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 160 PN16	 160 PN16	PE80 160 PN16	160	\N	124.200	160.000	8	16	9	17.9	\N
+7578	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 180 PN16	 180 PN16	PE80 180 PN16	180	\N	139.800	180.000	8	16	9	20.1	\N
+7579	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 200 PN16	 200 PN16	PE80 200 PN16	200	\N	155.200	200.000	8	16	9	22.4	\N
+7580	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 225 PN16	 225 PN16	PE80 225 PN16	225	\N	174.600	225.000	8	16	9	25.2	\N
+7581	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 250 PN16	 250 PN16	PE80 250 PN16	250	\N	194.200	250.000	8	16	9	27.9	\N
+7582	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 280 PN16	 280 PN16	PE80 280 PN16	280	\N	217.400	280.000	8	16	9	31.3	\N
+7583	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 315 PN16	 315 PN16	PE80 315 PN16	315	\N	244.600	315.000	8	16	9	35.2	\N
+7584	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 355 PN16	 355 PN16	PE80 355 PN16	355	\N	275.600	355.000	8	16	9	39.7	\N
+7585	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 400 PN16	 400 PN16	PE80 400 PN16	400	\N	310.600	400.000	8	16	9	44.7	\N
+7586	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 250 PN20	 250 PN20	PE80 250 PN20	250	\N	181.600	250.000	8	20	7.40000000000000036	34.2	\N
+7587	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 280 PN20	 280 PN20	PE80 280 PN20	280	\N	203.400	280.000	8	20	7.40000000000000036	38.3	\N
+7588	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 25 PN6	 25 PN6	PE80 25 PN6	25	\N	21.000	25.000	8	6	21	2.0	\N
+7589	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 40 PN6	 40 PN6	PE80 40 PN6	40	\N	36.000	40.000	8	6	21	2.0	\N
+7590	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 63 PN6	 63 PN6	PE80 63 PN6	63	\N	57.000	63.000	8	6	21	3.0	\N
+7591	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 75 PN6	 75 PN6	PE80 75 PN6	75	\N	67.800	75.000	8	6	21	3.6	\N
+7592	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 125 PN6	 125 PN6	PE80 125 PN6	125	\N	113.000	125.000	8	6	21	6.0	\N
+7593	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 140 PN6	 140 PN6	PE80 140 PN6	140	\N	126.600	140.000	8	6	21	6.7	\N
+7594	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 160 PN6	 160 PN6	PE80 160 PN6	160	\N	144.600	160.000	8	6	21	7.7	\N
+7595	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 180 PN6	 180 PN6	PE80 180 PN6	180	\N	162.800	180.000	8	6	21	8.6	\N
+7596	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 200 PN6	 200 PN6	PE80 200 PN6	200	\N	180.800	200.000	8	6	21	9.6	\N
+7597	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 225 PN6	 225 PN6	PE80 225 PN6	225	\N	203.400	225.000	8	6	21	10.8	\N
+7598	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 250 PN6	 250 PN6	PE80 250 PN6	250	\N	226.200	250.000	8	6	21	11.9	\N
+7599	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 280 PN6	 280 PN6	PE80 280 PN6	280	\N	253.200	280.000	8	6	21	13.4	\N
+7600	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 315 PN6	 315 PN6	PE80 315 PN6	315	\N	285.000	315.000	8	6	21	15.0	\N
+7601	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 355 PN6	 355 PN6	PE80 355 PN6	355	\N	321.200	355.000	8	6	21	16.9	\N
+7602	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 400 PN6	 400 PN6	PE80 400 PN6	400	\N	361.800	400.000	8	6	21	19.1	\N
+7603	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 450 PN6	 450 PN6	PE80 450 PN6	450	\N	407.000	450.000	8	6	21	21.5	\N
+7604	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 500 PN6	 500 PN6	PE80 500 PN6	500	\N	452.200	500.000	8	6	21	23.9	\N
+7605	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 560 PN6	 560 PN6	PE80 560 PN6	560	\N	506.600	560.000	8	6	21	26.7	\N
+7606	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 630 PN6	 630 PN6	PE80 630 PN6	630	\N	570.000	630.000	8	6	21	30.0	\N
+7607	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 710 PN6	 710 PN6	PE80 710 PN6	710	\N	642.200	710.000	8	6	21	33.9	\N
+7608	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 50 PN8	 50 PN8	PE80 50 PN8	50	\N	44.000	50.000	8	8	17	3.0	\N
+7609	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 63 PN8	 63 PN8	PE80 63 PN8	63	\N	55.400	63.000	8	8	17	3.8	\N
+7610	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 75 PN8	 75 PN8	PE80 75 PN8	75	\N	66.000	75.000	8	8	17	4.5	\N
+7611	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 90 PN8	 90 PN8	PE80 90 PN8	90	\N	79.200	90.000	8	8	17	5.4	\N
+7612	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 110 PN8	 110 PN8	PE80 110 PN8	110	\N	96.800	110.000	8	8	17	6.6	\N
+7613	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 125 PN8	 125 PN8	PE80 125 PN8	125	\N	110.200	125.000	8	8	17	7.4	\N
+7614	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 140 PN8	 140 PN8	PE80 140 PN8	140	\N	123.400	140.000	8	8	17	8.3	\N
+7615	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 160 PN8	 160 PN8	PE80 160 PN8	160	\N	141.000	160.000	8	8	17	9.5	\N
+7616	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 180 PN8	 180 PN8	PE80 180 PN8	180	\N	158.600	180.000	8	8	17	10.7	\N
+7617	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 200 PN8	 200 PN8	PE80 200 PN8	200	\N	176.200	200.000	8	8	17	11.9	\N
+7618	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 225 PN8	 225 PN8	PE80 225 PN8	225	\N	198.200	225.000	8	8	17	13.4	\N
+7619	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 250 PN8	 250 PN8	PE80 250 PN8	250	\N	220.400	250.000	8	8	17	14.8	\N
+7620	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 280 PN8	 280 PN8	PE80 280 PN8	280	\N	246.800	280.000	8	8	17	16.6	\N
+7621	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 315 PN8	 315 PN8	PE80 315 PN8	315	\N	277.600	315.000	8	8	17	18.7	\N
+7622	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 355 PN8	 355 PN8	PE80 355 PN8	355	\N	312.800	355.000	8	8	17	21.1	\N
+7623	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 400 PN8	 400 PN8	PE80 400 PN8	400	\N	352.600	400.000	8	8	17	23.7	\N
+7624	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 450 PN8	 450 PN8	PE80 450 PN8	450	\N	396.600	450.000	8	8	17	26.7	\N
+7625	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 500 PN8	 500 PN8	PE80 500 PN8	500	\N	440.600	500.000	8	8	17	29.7	\N
+7626	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 560 PN8	 560 PN8	PE80 560 PN8	560	\N	493.600	560.000	8	8	17	33.2	\N
+7627	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 630 PN8	 630 PN8	PE80 630 PN8	630	\N	555.200	630.000	8	8	17	37.4	\N
+7628	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 710 PN8	 710 PN8	PE80 710 PN8	710	\N	625.800	710.000	8	8	17	42.1	\N
+7629	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 90 PN6	 90 PN6	PE80 90 PN6	90	\N	81.400	90.000	8	6	21	4.3	\N
+7630	t	PE80		PE80	Polyéthylène 80		Polietilenă 80	\N	\N	\N	PE80 110 PN6	 110 PN6	PE80 110 PN6	110	\N	99.400	110.000	8	6	21	5.3	\N
+7700	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV	GRP	GRP	\N	\N	\N	\N	\N	\N	\N	\N	\N
+7701	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 150 PN10	GRP 150 PN10	GRP 150 PN10	150	150	156.000	168.000	\N	10	\N	6.0	10000
+7702	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 200 PN10	GRP 200 PN10	GRP 200 PN10	200	200	206.000	220.000	\N	10	\N	7.0	10000
+7703	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 250 PN10	GRP 250 PN10	GRP 250 PN10	250	250	254.000	272.000	\N	10	\N	9.0	10000
+7704	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 300 PN10	GRP 300 PN10	GRP 300 PN10	300	300	304.000	324.000	\N	10	\N	10.0	10000
+7705	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 350 PN10	GRP 350 PN10	GRP 350 PN10	350	350	352.000	376.000	\N	10	\N	12.0	10000
+7706	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 400 PN10	GRP 400 PN10	GRP 400 PN10	400	400	401.000	427.000	\N	10	\N	13.0	10000
+7707	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 450 PN10	GRP 450 PN10	GRP 450 PN10	450	450	452.000	478.000	\N	10	\N	13.0	10000
+7708	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 500 PN10	GRP 500 PN10	GRP 500 PN10	500	500	504.000	530.000	\N	10	\N	13.0	10000
+7709	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 550 PN10	GRP 550 PN10	GRP 550 PN10	550	550	520.000	550.000	\N	10	\N	15.0	10000
+7710	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 600 PN10	GRP 600 PN10	GRP 600 PN10	600	600	584.000	616.000	\N	10	\N	16.0	10000
+7711	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 650 PN10	GRP 650 PN10	GRP 650 PN10	650	650	616.000	650.000	\N	10	\N	17.0	10000
+7712	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 700 PN10	GRP 700 PN10	GRP 700 PN10	700	700	682.000	718.000	\N	10	\N	18.0	10000
+7713	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 750 PN10	GRP 750 PN10	GRP 750 PN10	750	750	714.000	752.000	\N	10	\N	19.0	10000
+7714	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 800 PN10	GRP 800 PN10	GRP 800 PN10	800	800	780.000	820.000	\N	10	\N	20.0	10000
+7715	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 860 PN10	GRP 860 PN10	GRP 860 PN10	860	860	818.000	860.000	\N	10	\N	21.0	10000
+7716	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 900 PN10	GRP 900 PN10	GRP 900 PN10	900	900	878.000	924.000	\N	10	\N	23.0	10000
+7717	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 960 PN10	GRP 960 PN10	GRP 960 PN10	960	960	912.000	960.000	\N	10	\N	24.0	10000
+7718	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1000 PN10	GRP 1000 PN10	GRP 1000 PN10	1000	1000	976.000	1026.000	\N	10	\N	25.0	10000
+7719	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1100 PN10	GRP 1100 PN10	GRP 1100 PN10	1100	1100	1045.000	1099.000	\N	10	\N	27.0	10000
+7720	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1200 PN10	GRP 1200 PN10	GRP 1200 PN10	1200	1200	1171.000	1229.000	\N	10	\N	29.0	10000
+7721	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1280 PN16	GRP 1280 PN16	GRP 1280 PN16	1280	1280	1218.000	1280.000	\N	16	\N	31.0	10000
+7722	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1348 PN16	GRP 1348 PN16	GRP 1348 PN16	1348	1348	1284.000	1348.000	\N	16	\N	32.0	10000
+7723	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1400 PN16	GRP 1400 PN16	GRP 1400 PN16	1400	1400	1366.000	1434.000	\N	16	\N	34.0	10000
+7724	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1500 PN16	GRP 1500 PN16	GRP 1500 PN16	1500	1500	1429.000	1499.000	\N	16	\N	35.0	10000
+7725	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 150 PN16	GRP 150 PN16	GRP 150 PN16	150	150	156.000	168.000	\N	16	\N	6.0	10000
+7726	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 200 PN16	GRP 200 PN16	GRP 200 PN16	200	200	206.000	220.000	\N	16	\N	7.0	10000
+7727	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 250 PN16	GRP 250 PN16	GRP 250 PN16	250	250	254.000	272.000	\N	16	\N	9.0	10000
+7728	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 300 PN16	GRP 300 PN16	GRP 300 PN16	300	300	304.000	324.000	\N	16	\N	10.0	10000
+7729	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 350 PN16	GRP 350 PN16	GRP 350 PN16	350	350	354.000	376.000	\N	16	\N	11.0	10000
+7730	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 400 PN16	GRP 400 PN16	GRP 400 PN16	400	400	403.000	427.000	\N	16	\N	12.0	10000
+7731	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 450 PN16	GRP 450 PN16	GRP 450 PN16	450	450	452.000	478.000	\N	16	\N	13.0	10000
+7733	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 500 PN16	GRP 500 PN16	GRP 500 PN16	500	500	502.000	530.000	\N	16	\N	14.0	10000
+7734	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 550 PN16	GRP 550 PN16	GRP 550 PN16	550	550	522.000	550.000	\N	16	\N	14.0	10000
+7735	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 600 PN16	GRP 600 PN16	GRP 600 PN16	600	600	584.000	616.000	\N	16	\N	16.0	10000
+7736	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 650 PN16	GRP 650 PN16	GRP 650 PN16	650	650	618.000	650.000	\N	16	\N	16.0	10000
+7737	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 700 PN16	GRP 700 PN16	GRP 700 PN16	700	700	684.000	718.000	\N	16	\N	17.0	10000
+7738	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 750 PN16	GRP 750 PN16	GRP 750 PN16	750	750	716.000	752.000	\N	16	\N	18.0	10000
+7739	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 800 PN16	GRP 800 PN16	GRP 800 PN16	800	800	782.000	820.000	\N	16	\N	19.0	10000
+7740	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 860 PN16	GRP 860 PN16	GRP 860 PN16	860	860	820.000	860.000	\N	16	\N	20.0	10000
+7741	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 900 PN16	GRP 900 PN16	GRP 900 PN16	900	900	880.000	924.000	\N	16	\N	22.0	10000
+7742	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 960 PN16	GRP 960 PN16	GRP 960 PN16	960	960	914.000	960.000	\N	16	\N	23.0	10000
+7743	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1000 PN16	GRP 1000 PN16	GRP 1000 PN16	1000	1000	978.000	1026.000	\N	16	\N	24.0	10000
+7744	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1100 PN16	GRP 1100 PN16	GRP 1100 PN16	1100	1100	1047.000	1099.000	\N	16	\N	26.0	10000
+7745	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1200 PN16	GRP 1200 PN16	GRP 1200 PN16	1200	1200	1171.000	1229.000	\N	16	\N	29.0	10000
+7746	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1280 PN16	GRP 1280 PN16	GRP 1280 PN16	1280	1280	1220.000	1280.000	\N	16	\N	30.0	10000
+7747	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1348 PN16	GRP 1348 PN16	GRP 1348 PN16	1348	1348	1286.000	1348.000	\N	16	\N	31.0	10000
+7748	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1400 PN16	GRP 1400 PN16	GRP 1400 PN16	1400	1400	1368.000	1434.000	\N	16	\N	33.0	10000
+7749	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1500 PN16	GRP 1500 PN16	GRP 1500 PN16	1500	1500	1429.000	1499.000	\N	16	\N	35.0	10000
+7750	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1535 PN16	GRP 1535 PN16	GRP 1535 PN16	1535	1535	1463.000	1535.000	\N	16	\N	36.0	10000
+7751	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1600 PN16	GRP 1600 PN16	GRP 1600 PN16	1600	1600	1562.000	1638.000	\N	16	\N	38.0	10000
+7752	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 150 PN20	GRP 150 PN20	GRP 150 PN20	150	150	156.000	168.000	\N	20	\N	6.0	10000
+7753	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 200 PN20	GRP 200 PN20	GRP 200 PN20	200	200	206.000	220.000	\N	20	\N	7.0	10000
+7754	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 250 PN20	GRP 250 PN20	GRP 250 PN20	250	250	256.000	272.000	\N	20	\N	8.0	10000
+7755	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 300 PN20	GRP 300 PN20	GRP 300 PN20	300	300	304.000	324.000	\N	20	\N	10.0	10000
+7756	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 350 PN20	GRP 350 PN20	GRP 350 PN20	350	350	354.000	376.000	\N	20	\N	11.0	10000
+7757	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 400 PN20	GRP 400 PN20	GRP 400 PN20	400	400	403.000	427.000	\N	20	\N	12.0	10000
+7758	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 450 PN20	GRP 450 PN20	GRP 450 PN20	450	450	454.000	478.000	\N	20	\N	12.0	10000
+7759	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 500 PN20	GRP 500 PN20	GRP 500 PN20	500	500	504.000	530.000	\N	20	\N	13.0	10000
+7760	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 550 PN20	GRP 550 PN20	GRP 550 PN20	550	550	522.000	550.000	\N	20	\N	14.0	10000
+7761	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 600 PN20	GRP 600 PN20	GRP 600 PN20	600	600	586.000	616.000	\N	20	\N	15.0	10000
+7762	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 650 PN20	GRP 650 PN20	GRP 650 PN20	650	650	618.000	650.000	\N	20	\N	16.0	10000
+7763	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 700 PN20	GRP 700 PN20	GRP 700 PN20	700	700	684.000	718.000	\N	20	\N	17.0	10000
+7764	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 750 PN20	GRP 750 PN20	GRP 750 PN20	750	750	716.000	752.000	\N	20	\N	18.0	10000
+7765	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 800 PN20	GRP 800 PN20	GRP 800 PN20	800	800	782.000	820.000	\N	20	\N	19.0	10000
+7766	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 860 PN20	GRP 860 PN20	GRP 860 PN20	860	860	820.000	860.000	\N	20	\N	20.0	10000
+7767	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 900 PN20	GRP 900 PN20	GRP 900 PN20	900	900	882.000	924.000	\N	20	\N	21.0	10000
+7768	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 960 PN20	GRP 960 PN20	GRP 960 PN20	960	960	918.000	960.000	\N	20	\N	21.0	10000
+7769	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1000 PN20	GRP 1000 PN20	GRP 1000 PN20	1000	1000	980.000	1026.000	\N	20	\N	23.0	10000
+7770	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1100 PN20	GRP 1100 PN20	GRP 1100 PN20	1100	1100	1049.000	1099.000	\N	20	\N	25.0	10000
+7772	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1200 PN20	GRP 1200 PN20	GRP 1200 PN20	1200	1200	1175.000	1229.000	\N	20	\N	27.0	10000
+7773	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1280 PN20	GRP 1280 PN20	GRP 1280 PN20	1280	1280	1224.000	1280.000	\N	20	\N	28.0	10000
+7774	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1348 PN20	GRP 1348 PN20	GRP 1348 PN20	1348	1348	1284.000	1348.000	\N	20	\N	32.0	10000
+7775	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1400 PN20	GRP 1400 PN20	GRP 1400 PN20	1400	1400	1366.000	1434.000	\N	20	\N	34.0	10000
+7776	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1500 PN20	GRP 1500 PN20	GRP 1500 PN20	1500	1500	1435.000	1499.000	\N	20	\N	32.0	10000
+7777	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1535 PN20	GRP 1535 PN20	GRP 1535 PN20	1535	1535	1469.000	1535.000	\N	20	\N	33.0	10000
+7778	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1600 PN20	GRP 1600 PN20	GRP 1600 PN20	1600	1600	1568.000	1638.000	\N	20	\N	35.0	10000
+7779	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 150 PN25	GRP 150 PN25	GRP 150 PN25	150	150	156.000	168.000	\N	25	\N	6.0	10000
+7780	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 200 PN25	GRP 200 PN25	GRP 200 PN25	200	200	206.000	220.000	\N	25	\N	7.0	10000
+7781	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 250 PN25	GRP 250 PN25	GRP 250 PN25	250	250	256.000	272.000	\N	25	\N	8.0	10000
+7782	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 300 PN25	GRP 300 PN25	GRP 300 PN25	300	300	304.000	324.000	\N	25	\N	10.0	10000
+7783	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 350 PN25	GRP 350 PN25	GRP 350 PN25	350	350	354.000	376.000	\N	25	\N	11.0	10000
+7784	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 400 PN25	GRP 400 PN25	GRP 400 PN25	400	400	403.000	427.000	\N	25	\N	12.0	10000
+7785	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 450 PN25	GRP 450 PN25	GRP 450 PN25	450	450	454.000	478.000	\N	25	\N	12.0	10000
+7786	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 500 PN25	GRP 500 PN25	GRP 500 PN25	500	500	504.000	530.000	\N	25	\N	13.0	10000
+7787	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 550 PN25	GRP 550 PN25	GRP 550 PN25	550	550	522.000	550.000	\N	25	\N	14.0	10000
+7788	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 600 PN25	GRP 600 PN25	GRP 600 PN25	600	600	586.000	616.000	\N	25	\N	15.0	10000
+7789	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 650 PN25	GRP 650 PN25	GRP 650 PN25	650	650	618.000	650.000	\N	25	\N	16.0	10000
+7790	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 700 PN25	GRP 700 PN25	GRP 700 PN25	700	700	684.000	718.000	\N	25	\N	17.0	10000
+7791	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 750 PN25	GRP 750 PN25	GRP 750 PN25	750	750	716.000	752.000	\N	25	\N	18.0	10000
+7792	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 800 PN25	GRP 800 PN25	GRP 800 PN25	800	800	782.000	820.000	\N	25	\N	19.0	10000
+7793	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 860 PN25	GRP 860 PN25	GRP 860 PN25	860	860	822.000	860.000	\N	25	\N	19.0	10000
+7794	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 900 PN25	GRP 900 PN25	GRP 900 PN25	900	900	882.000	924.000	\N	25	\N	21.0	10000
+7795	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 960 PN25	GRP 960 PN25	GRP 960 PN25	960	960	918.000	960.000	\N	25	\N	21.0	10000
+7796	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1000 PN25	GRP 1000 PN25	GRP 1000 PN25	1000	1000	980.000	1026.000	\N	25	\N	23.0	10000
+7797	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 150 PN32	GRP 150 PN32	GRP 150 PN32	150	150	154.000	168.000	\N	32	\N	7.0	10000
+7798	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 200 PN32	GRP 200 PN32	GRP 200 PN32	200	200	204.000	220.000	\N	32	\N	8.0	10000
+7799	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 250 PN32	GRP 250 PN32	GRP 250 PN32	250	250	252.000	272.000	\N	32	\N	10.0	10000
+7800	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 300 PN32	GRP 300 PN32	GRP 300 PN32	300	300	302.000	324.000	\N	32	\N	11.0	10000
+7801	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 350 PN32	GRP 350 PN32	GRP 350 PN32	350	350	352.000	376.000	\N	32	\N	12.0	10000
+7802	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 400 PN32	GRP 400 PN32	GRP 400 PN32	400	400	401.000	427.000	\N	32	\N	13.0	10000
+7803	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 450 PN32	GRP 450 PN32	GRP 450 PN32	450	450	448.000	478.000	\N	32	\N	15.0	10000
+7804	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 500 PN32	GRP 500 PN32	GRP 500 PN32	500	500	498.000	530.000	\N	32	\N	16.0	10000
+7805	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 550 PN32	GRP 550 PN32	GRP 550 PN32	550	550	518.000	550.000	\N	32	\N	16.0	10000
+7806	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 600 PN32	GRP 600 PN32	GRP 600 PN32	600	600	580.000	616.000	\N	32	\N	18.0	10000
+7807	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 650 PN32	GRP 650 PN32	GRP 650 PN32	650	650	614.000	650.000	\N	32	\N	18.0	10000
+7808	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 700 PN32	GRP 700 PN32	GRP 700 PN32	700	700	678.000	718.000	\N	32	\N	20.0	10000
+7809	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 750 PN32	GRP 750 PN32	GRP 750 PN32	750	750	710.000	752.000	\N	32	\N	21.0	10000
+7810	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 800 PN32	GRP 800 PN32	GRP 800 PN32	800	800	774.000	820.000	\N	32	\N	23.0	10000
+7811	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 860 PN32	GRP 860 PN32	GRP 860 PN32	860	860	812.000	860.000	\N	32	\N	24.0	10000
+7812	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 900 PN32	GRP 900 PN32	GRP 900 PN32	900	900	874.000	924.000	\N	32	\N	25.0	10000
+7813	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 960 PN32	GRP 960 PN32	GRP 960 PN32	960	960	908.000	960.000	\N	32	\N	26.0	10000
+7814	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1000 PN32	GRP 1000 PN32	GRP 1000 PN32	1000	1000	972.000	1026.000	\N	32	\N	27.0	10000
+7815	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 150 PN6	GRP 150 PN6	GRP 150 PN6	150	150	156.000	168.000	\N	6	\N	6.0	10000
+7816	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 200 PN6	GRP 200 PN6	GRP 200 PN6	200	200	204.000	220.000	\N	6	\N	8.0	10000
+7817	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 250 PN6	GRP 250 PN6	GRP 250 PN6	250	250	254.000	272.000	\N	6	\N	9.0	10000
+7818	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 300 PN6	GRP 300 PN6	GRP 300 PN6	300	300	304.000	324.000	\N	6	\N	10.0	10000
+7819	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 350 PN6	GRP 350 PN6	GRP 350 PN6	350	350	352.000	376.000	\N	6	\N	12.0	10000
+7820	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 400 PN6	GRP 400 PN6	GRP 400 PN6	400	400	403.000	427.000	\N	6	\N	12.0	10000
+7821	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 450 PN6	GRP 450 PN6	GRP 450 PN6	450	450	452.000	478.000	\N	6	\N	13.0	10000
+7822	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 500 PN6	GRP 500 PN6	GRP 500 PN6	500	500	502.000	530.000	\N	6	\N	14.0	10000
+7823	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 550 PN6	GRP 550 PN6	GRP 550 PN6	550	550	520.000	550.000	\N	6	\N	15.0	10000
+7824	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 600 PN6	GRP 600 PN6	GRP 600 PN6	600	600	584.000	616.000	\N	6	\N	16.0	10000
+7825	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 650 PN6	GRP 650 PN6	GRP 650 PN6	650	650	616.000	650.000	\N	6	\N	17.0	10000
+7826	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 700 PN6	GRP 700 PN6	GRP 700 PN6	700	700	682.000	718.000	\N	6	\N	18.0	10000
+7827	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 750 PN6	GRP 750 PN6	GRP 750 PN6	750	750	714.000	752.000	\N	6	\N	19.0	10000
+7828	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 800 PN6	GRP 800 PN6	GRP 800 PN6	800	800	778.000	820.000	\N	6	\N	21.0	10000
+7829	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 860 PN6	GRP 860 PN6	GRP 860 PN6	860	860	818.000	860.000	\N	6	\N	21.0	10000
+7830	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 900 PN6	GRP 900 PN6	GRP 900 PN6	900	900	878.000	924.000	\N	6	\N	23.0	10000
+7831	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 960 PN6	GRP 960 PN6	GRP 960 PN6	960	960	912.000	960.000	\N	6	\N	24.0	10000
+7832	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1000 PN6	GRP 1000 PN6	GRP 1000 PN6	1000	1000	976.000	1026.000	\N	6	\N	25.0	10000
+7833	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1100 PN6	GRP 1100 PN6	GRP 1100 PN6	1100	1100	1045.000	1099.000	\N	6	\N	27.0	10000
+7834	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1200 PN6	GRP 1200 PN6	GRP 1200 PN6	1200	1200	1169.000	1229.000	\N	6	\N	30.0	10000
+7835	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1280 PN6	GRP 1280 PN6	GRP 1280 PN6	1280	1280	1218.000	1280.000	\N	6	\N	31.0	10000
+7836	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1348 PN6	GRP 1348 PN6	GRP 1348 PN6	1348	1348	1284.000	1348.000	\N	6	\N	32.0	10000
+7837	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1400 PN6	GRP 1400 PN6	GRP 1400 PN6	1400	1400	1366.000	1434.000	\N	6	\N	34.0	10000
+7838	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1500 PN6	GRP 1500 PN6	GRP 1500 PN6	1500	1500	1429.000	1499.000	\N	6	\N	35.0	10000
+7839	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1535 PN6	GRP 1535 PN6	GRP 1535 PN6	1535	1535	1463.000	1535.000	\N	6	\N	36.0	10000
+7840	t	PRV	GRP	GRP	Polyester renforcé de fibres de verre	Glass-fibre-reinforced polyester	Rășini armate cu fibră de sticlă (GRP)	\N	\N	\N	PRV 1600 PN6	GRP 1600 PN6	GRP 1600 PN6	1600	1600	1560.000	1638.000	\N	6	\N	39.0	10000
+\.
+
+
+--
+-- TOC entry 4451 (class 0 OID 33097)
+-- Dependencies: 286
+-- Data for Name: pipe_protection; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pipe_protection (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+4302	t	\N	\N	\N	SOMO PVC	\N	SOMO PVC	\N	\N	\N
+4304	t	\N	\N	\N	SOMO autre	\N	SOMO de alt tip	\N	\N	\N
+4310	t	\N	\N	\N	SOMO PE	\N	SOMO PE	\N	\N	\N
+4301	t	\N	\N	\N	ancienne conduite AGG	\N	conductă veche de OLG	\N	\N	\N
+4303	t	\N	\N	\N	ancienne conduite F	\N	conductă veche Fontă	\N	\N	\N
+4305	t	\N	\N	\N	ancienne conduite TAC	\N	conductă veche Azbociment	\N	\N	\N
+4306	t	\N	\N	\N	ancienne conduite AC	\N	conductă veche OL	\N	\N	\N
+4307	t	\N	\N	\N	ancienne conduite PE	\N	conductă veche PE	\N	\N	\N
+4308	t	\N	\N	\N	ancienne conduite autre	\N	conductă veche de alt tip	\N	\N	\N
+4309	t	\N	\N	\N	dans tuyau ciment	\N	în conductă ciment	\N	\N	\N
+4311	t	\N	\N	\N	flexible	\N	flexibilă	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4435 (class 0 OID 32971)
+-- Dependencies: 270
+-- Data for Name: precision; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY "precision" (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	Autre	Other	Alta	\N	\N	\N	\N
+102	t	\N	\N	\N	Inconnu	Unknown	Necunoscută	\N	\N	\N	1
+103	t	\N	\N	\N	À déterminer	To be determined	De determinat	\N	\N	\N	\N
+1101	t	\N	\N	\N	Imprécis	Unprecise	Imprecisă	\N	\N	\N	1
+1102	t	\N	\N	\N	Précis	Precise	Precisă	\N	\N	\N	0
+1103	t	\N	\N	\N	Localisé	Localized	Localizată	\N	\N	\N	1
+1104	t	\N	\N	\N	Digitalisé	Digitalized	Digitizată	\N	\N	\N	1
+\.
+
+
+--
+-- TOC entry 4436 (class 0 OID 32978)
+-- Dependencies: 271
+-- Data for Name: precisionalti; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY precisionalti (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	Autre	Other	Alta	\N	\N	\N	\N
+102	t	\N	\N	\N	Inconnu	Unknown	Necunoscută	\N	\N	\N	1
+103	t	\N	\N	\N	À déterminer	To be determined	De determinat	\N	\N	\N	\N
+1121	t	\N	\N	\N	Imprécis	Unprecised	Imprecisă	\N	\N	\N	1
+1122	t	\N	\N	\N	Inférieure à 100 cm	Better than 100 cm	Mai bună de 100 cm	\N	\N	\N	0
+1123	t	\N	\N	\N	Inférieure à 50 cm	Better than 50 cm	Mai bună de 50 cm	\N	\N	\N	0
+1124	t	\N	\N	\N	Inférieure à 10 cm	Better than 10 cm	Mai bună de 10 cm	\N	\N	\N	0
+1125	t	\N	\N	\N	Inférieure à 5 cm	Better than 5 cm	Mai bună de 5 cm	\N	\N	\N	0
+\.
+
+
+--
+-- TOC entry 4440 (class 0 OID 33013)
+-- Dependencies: 275
+-- Data for Name: pressurecontrol_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pressurecontrol_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+2801	t	\N	\N	\N	réducteur	reducer	reductor	\N	\N	\N
+2802	t	\N	\N	\N	coupe-pression	pressure cut	tăiere presiune	\N	\N	\N
+2803	t	\N	\N	\N	rassemblement	gathering	colectare/captare	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4458 (class 0 OID 33208)
+-- Dependencies: 293
+-- Data for Name: protectionzone_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY protectionzone_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	Autre	Other	Alta	Autre	Other	Alta	\N	\N	\N
+102	t	Inconnu	Unknown	Nec.	Inconnu	Unknown	Necunoscută	\N	\N	\N
+103	t	À dét.	To determ.	De det.	à déterminer	To be determined	De determinat	\N	\N	\N
+9501	t	S1	S1	S1	Zone de protection S1	S1 protection zone	Zonă de protecţie S1	\N	\N	\N
+9502	t	S2	S2	S2	Zone de protection S2	S2 protection zone	Zonă de protecţie S2	\N	\N	\N
+9503	t	S3	S3	S3	Zone de protection S3	S3 protection zone	Zonă de protecţie S3	\N	\N	\N
+9504	t	PP	PP	PP	Périmètre de protection	Protection perimeter	Perimetru de protecţie	\N	\N	\N
+9505	t	Zo	Zo	Zo	Zone de protection des eaux de surface	Surface Water protection zone	Zonă de protecţie a apelor de suprafaţă	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4441 (class 0 OID 33020)
+-- Dependencies: 276
+-- Data for Name: pump_operating; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pump_operating (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	0
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+2402	t	\N	\N	\N	alterné	alternative	alternativ	\N	\N	\N	1
+2403	t	\N	\N	\N	parallèle	parallel	paralel	\N	\N	\N	2
+\.
+
+
+--
+-- TOC entry 4442 (class 0 OID 33027)
+-- Dependencies: 277
+-- Data for Name: pump_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY pump_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+2501	t	\N	\N	\N	surpresseur		hidrofor	\N	\N	\N	0
+2502	t	\N	\N	\N	normal		normal	\N	\N	\N	1
+2503	t	\N	\N	\N	accélération		periferică	\N	\N	\N	2
+\.
+
+
+--
+-- TOC entry 4443 (class 0 OID 33034)
+-- Dependencies: 278
+-- Data for Name: remote_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY remote_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+1201	t	\N	\N	\N	Aucune		Niciuna	\N	\N	\N
+1202	t	\N	\N	\N	Cable en site propre		Cablu propriu	\N	\N	\N
+1203	t	\N	\N	\N	Ligne louée		Linie închiriată	\N	\N	\N
+1204	t	\N	\N	\N	Ligne commutée		Linie comutată	\N	\N	\N
+1205	t	\N	\N	\N	ADSL		ADSL	\N	\N	\N
+1206	t	\N	\N	\N	Radio		Radio	\N	\N	\N
+1207	t	\N	\N	\N	GPRS		GPRS	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4444 (class 0 OID 33041)
+-- Dependencies: 279
+-- Data for Name: source_quality; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY source_quality (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	0
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+2602	t	\N	\N	\N	bonne	\N	bună	\N	\N	\N	1
+2603	t	\N	\N	\N	conditionnellement bonne	\N	bună condiţionat	\N	\N	\N	2
+2604	t	\N	\N	\N	désinfection obligatoire	\N	dezinfecţie obligatorie	\N	\N	\N	3
+\.
+
+
+--
+-- TOC entry 4445 (class 0 OID 33048)
+-- Dependencies: 280
+-- Data for Name: source_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY source_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+2701	t	\N	\N	\N	captage eau lac	\N	captare lac	\N	\N	\N	0
+2702	t	\N	\N	\N	captage eau nappe	\N	captare strat freatic	\N	\N	\N	1
+2703	t	\N	\N	\N	captage eau source	\N	captare sursă subterană	\N	\N	\N	2
+2704	t	\N	\N	\N	captage eau rivière	\N	captare râu	\N	\N	\N	3
+\.
+
+
+--
+-- TOC entry 4437 (class 0 OID 32985)
+-- Dependencies: 272
+-- Data for Name: status; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY status (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, active, functional, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	t	t	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	t	t	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	t	t	\N
+1307	t	\N	\N	\N	fictif	fictional	Fictiv	L'objet n'existe pas mais est nécessaire à l'intégrité topologique.		Obiectul este fictiv dar este necesar pentru integritatea topologică.	t	t	1
+1303	t	\N	\N	\N	désaffecté	shut down	Dezafectat	La mise hors service est quasi-définitive et une remise en service nécessiterai des opérations spéciales. Par exemple, une source non-captée est considérée comme désaffectée. Ou encore, une conduite n'étant plus raccordée maism étant toutefois dans état propre à son utilisation.		Punerea în stare dezafectată este semi definitivă iar repunerea în stare funcţională ar necesita operaţiuni speciale. Spre exemplu, o sursă necaptată este considerată ca dezafectată. Sau mai mult, o conductă care nu este racordată dar a cărei stare e utilizabilă.	f	f	\N
+1305	t	\N	\N	\N	détruit	destroyed	Distrus	L'objet a été partiellement ou complètement détruit.		Obiectul este distrus complet sau parţial	f	f	\N
+1302	t	\N	\N	\N	hors service	out of service	Nefuncţional	Ne contribue actuellement pas au réseau, mais peut être remis en service sans opération spéciale. La mise hors service est considérée comme temporaire. Par exemple, une source mise hors service pour des problèmes de qualité.		Nu contribuie efectiv la reţea, dar poate fi repusă în stare funcţională fară operaţiuni speciale. Starea nefuncţională este considerată ca una temporară. De exemplu, putem avea o sursă care a fost pusă în stare nefuncţională datorită unor probleme de calitate.	f	t	\N
+1301	t	\N	\N	\N	en service	in use	Funcţional	Contribue actuellement au réseau.		Contribuie efectiv la reţea.	t	t	1
+1304	t	\N	\N	\N	abandonné	disused	Abandonat	L'objet est inutilisable et sa mise hors service est strictement définitive. Par exemple, une conduite non raccordée et impropre au transport d'eau, mais pouvant éventuellement servir à passer des câbles. Ou encore une station de pompage sans pompe en état de fonctionner.		Obiectul este abandonat iar scoaterea din funcţiune este strict definitivă. Spre exemplu, putem avea o conductă neracordată și improprie transportului de apă dar care poate fi eventual folosită ca mediu protector pentru alte conducte sau pt. cabluri. Alt exemplu este o statie de pompare fară nici o pompă  în stare funcţională.	f	f	\N
+1306	t	\N	\N	\N	projet	project	Proiect	L'objet est un projet validé en attente ou en cours de réalisation.		Obiectul face parte dintr-un proiect care se va face sau în curs de realizare. 	f	f	\N
+\.
+
+
+--
+-- TOC entry 4454 (class 0 OID 33138)
+-- Dependencies: 289
+-- Data for Name: subscriber_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY subscriber_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+9401	t	abo	\N	\N	Abonnement	Subscriber	abonat	\N	\N	\N
+9402	t	arr	\N	\N	Arrosage	\N	irigare/udare	\N	\N	\N
+9403	t	font	\N	\N	Fontaine	Fountain	fântână cişmea	\N	\N	\N
+9404	t	wc	\N	\N	WC	WC	WC	\N	\N	\N
+9405	t	spkr	\N	\N	Sprinkler	\N	stropitoare/sprinkler	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4462 (class 0 OID 33305)
+-- Dependencies: 305
+-- Data for Name: survey_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY survey_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+9901	t	\N	\N	\N	GPS	GPS	GPS	\N	\N	\N	\N
+9902	t	\N	\N	\N	chevillère	meter?	?	\N	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4446 (class 0 OID 33055)
+-- Dependencies: 281
+-- Data for Name: tank_firestorage; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY tank_firestorage (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+2301	t	\N	\N	\N	aucune	\N	niciunul	\N	\N	\N
+2302	t	\N	\N	\N	cuve 1 entière	\N	cisterna 1 toată	\N	\N	\N
+2303	t	\N	\N	\N	cuve 1 partielle	\N	cisterna 1 parţial	\N	\N	\N
+2304	t	\N	\N	\N	cuve 2 entière	\N	cisterna 2 toată	\N	\N	\N
+2305	t	\N	\N	\N	cuve 2 partielle	\N	cisterna 2 parţial	\N	\N	\N
+2306	t	\N	\N	\N	2 cuves partielles	\N	2 cisterne parţial	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4428 (class 0 OID 32922)
+-- Dependencies: 263
+-- Data for Name: value_list_base; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY value_list_base (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+\.
+
+
+--
+-- TOC entry 4455 (class 0 OID 33150)
+-- Dependencies: 290
+-- Data for Name: valve_actuation; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY valve_actuation (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, schema_visible) FROM stdin;
+101	t	\N	\N	\N	autre	other	altul	\N	\N	\N	t
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N	t
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	t
+6401	t	\N	\N	\N	manuel	hand control	manuală	\N	\N	\N	t
+6402	t	\N	\N	\N	manuel à gauche	left hand control	manuală la stânga	\N	\N	\N	t
+6403	t	\N	\N	\N	électrique	electric drive	electrică	\N	\N	\N	t
+6404	t	\N	\N	\N	télécommandée	remote controlled	telecomandată	\N	\N	\N	t
+\.
+
+
+--
+-- TOC entry 4456 (class 0 OID 33158)
+-- Dependencies: 291
+-- Data for Name: valve_function; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY valve_function (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, schema_visible) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	t
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	t
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	t
+6101	t	\N	\N	\N	vanne de régulation	control valve	vană reglaj	\N	\N	\N	t
+6102	t	Ve	\N	\N	ventouse	vacuum release	aerisire	\N	\N	\N	t
+6103	t	\N	\N	\N	vanne bypass	bypass valve	vană bypass	\N	\N	\N	t
+6105	t	\N	\N	\N	vanne branchement	connecting pipe	robinet concesie	\N	\N	\N	f
+6107	t	\N	\N	\N	vanne incendie	fire valve	vană incendiu	\N	\N	\N	t
+6108	t	\N	\N	\N	vanne d'hydrant	hydrant valve	vană hidrant	\N	\N	\N	t
+6110	t	Vi	\N	\N	vidange	discharge	vană golire	\N	\N	\N	t
+6111	t	\N	\N	\N	vanne réseau		vană cu sertar	\N	\N	\N	t
+6112	t	ViVe	\N	\N	vidange-ventouse	discharge-vacuum	golire-aerisire	\N	\N	\N	t
+6113	t	\N	\N	\N	antiretour	backflow prevention	antiretur	\N	\N	\N	t
+6114	t	\N	\N	\N	vanne sprinkler	sprinkler	sprinkler?	\N	\N	\N	t
+6115	t	\N	\N	\N	jauge	vent valve	aerisire	\N	\N	\N	t
+\.
+
+
+--
+-- TOC entry 4463 (class 0 OID 33312)
+-- Dependencies: 306
+-- Data for Name: valve_maintenance; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY valve_maintenance (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, priority) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+6201	t	\N	\N	\N	Cape fendue	\N	Înveliş crăpat	\N	\N	\N	3
+6202	t	\N	\N	\N	Joint manquant	\N	Lipsă tijă	\N	\N	\N	2
+6203	t	\N	\N	\N	Bloquée	\N	Blocată	\N	\N	\N	1
+\.
+
+
+--
+-- TOC entry 4457 (class 0 OID 33166)
+-- Dependencies: 292
+-- Data for Name: valve_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY valve_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscut	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+6301	t	\N	\N	\N	vanne à opercule	gate valve	vană cu sertar	\N	\N	\N
+6302	t	\N	\N	\N	vanne clayton	clayton valve	vană clayton	\N	\N	\N
+6303	t	\N	\N	\N	vanne annulaire	annular valve	vană inelară	\N	\N	\N
+6306	t	\N	\N	\N	limiteur de débit	flow control valve	reductor	\N	\N	\N
+6307	t	\N	\N	\N	clapet anti-retour	check valve	vană cu clapetă	\N	\N	\N
+6309	t	\N	\N	\N	sprinkler		sprinkler	\N	\N	\N
+6310	t	\N	\N	\N	vanne	valve	vană	\N	\N	\N
+6311	t	P	\N	\N	vanne papillon	butterfly valve	vană fluture	\N	\N	\N
+6312	t	\N	\N	\N	Elgef		Elgef	\N	\N	\N
+6313	t	\N	\N	\N	1/4 de tour	1/4 of turn	sfert de tur	\N	\N	\N
+6314	t	\N	\N	\N	soupape manuelle		supapă ?	\N	\N	\N
+6315	t	\N	\N	\N	soupape automatique		supapă automată	\N	\N	\N
+\.
+
+
+--
+-- TOC entry 4464 (class 0 OID 33320)
+-- Dependencies: 307
+-- Data for Name: visible; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY visible (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, vl_code, vl_code_int) FROM stdin;
+1401	t	\N	\N	\N	Auto	Auto	Auto	\N	\N	\N	\N	1
+1402	t	\N	\N	\N	Visible	Visible	Vizibilă	\N	\N	\N	t	2
+1403	t	\N	\N	\N	Invisible	Invisible	Invizibilă	\N	\N	\N	f	0
+\.
+
+
+--
+-- TOC entry 4447 (class 0 OID 33062)
+-- Dependencies: 282
+-- Data for Name: watertype; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY watertype (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro, code_sire) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N	\N
+1501	t	\N	\N	\N	brute	raw	brută	\N	\N	\N	0
+1502	t	\N	\N	\N	potable	drinkable	potabilă	\N	\N	\N	1
+1503	t	\N	\N	\N	industrielle	industrial	industrială	\N	\N	\N	2
+\.
+
+
+--
+-- TOC entry 4465 (class 0 OID 33327)
+-- Dependencies: 308
+-- Data for Name: worker_type; Type: TABLE DATA; Schema: qwat_vl; Owner: postgres
+--
+
+COPY worker_type (id, vl_active, short_fr, short_en, short_ro, value_fr, value_en, value_ro, description_fr, description_en, description_ro) FROM stdin;
+101	t	\N	\N	\N	autre	other	alta	\N	\N	\N
+102	t	\N	\N	\N	inconnu	unknown	necunoscută	\N	\N	\N
+103	t	\N	\N	\N	à déterminer	to be determined	de determinat	\N	\N	\N
+8001	t	\N	\N	\N		leaks repairing	rezolvare avarii	\N	\N	\N
+8002	t	\N	\N	\N		valves checking	verificare vane	\N	\N	\N
+8003	t	\N	\N	\N		hydrants checking	verificare hidranti	\N	\N	\N
+\.
+
+
+-- Completed on 2017-04-14 13:44:53 UTC
+
+--
+-- PostgreSQL database dump complete
+--
+
