@@ -37,4 +37,38 @@ and you should see this screen:
 
 ![qwat-demo](qgis.png)
 
--
+
+# For developpers
+
+dump are generated with the following options: 
+
+ ! make sure to change versions and connection informations before reusing it !
+
+
+## dump data only - custom format (but postgres version dependant ) 
+```
+/usr/bin/pg_dump --host localhost --port 5432 --username "postgres" --no-password  --format custom --blobs --section data  --compress 5 --verbose --file "/home/regis/OSLANDIA/projets_locaux/QWAT/qwat-data-sample/qwat_v1.2.1_data_only_sample.backup" --schema "qwat_dr" --schema "qwat_od" "qwat"
+```
+
+## dump data only - plain text (better interoperability between postgreSQL versions)
+
+```
+/usr/bin/pg_dump --host localhost --port 5432 --username "postgres" --no-password  --format plain --blobs --section data   --verbose --file "/home/regis/OSLANDIA/projets_locaux/QWAT/qwat-data-sample/qwat_v1.2.1_data_only_sample.sql" --schema "qwat_od" --schema "qwat_dr" "qwat"
+```
+
+
+## Full dump - custom format (but postgres version dependant )
+
+```
+/usr/bin/pg_dump --host localhost --port 5432 --username "postgres" --no-password  --format custom --blobs --compress 5 --verbose --file "/home/regis/OSLANDIA/projets_locaux/QWAT/qwat-data-sample/qwat_v1.2.1_data_and_structure_sample.backup"  -N "public" "qwat" "qwat"
+```
+
+
+## Full dump - plain text (better interoperability between postgreSQL versions)
+
+```
+/usr/bin/pg_dump --host localhost --port 5432 --username "postgres" --no-password  --format plain --blobs --verbose --file "/home/regis/OSLANDIA/projets_locaux/QWAT/qwat-data-sample/qwat_v1.2.1_data_and_structure_sample.sql" -N "public" "qwat"
+```
+
+
+
