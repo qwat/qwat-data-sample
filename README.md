@@ -1,10 +1,13 @@
 # qwat-data-sample
 
-The repository holds data samples for the qWAT water distribution management project
+NEW: since 1.3.0 (2017-12-01)- data samples are found within each [data model release](https://github.com/qwat/qwat-data-model/releases). 
 
- - qwat_v1.2.1_data_only_sample.backup : a data only backup, to be used after using init script
- - qwat_v1.2.1_data_and_structure_sample.backup : a full backup with data and structure.
+This repository holds now OLD data samples for the QWAT water distribution management project
 
+ - qwat_vx.x.x_data_only_sample.backup : a data only backup, to be used after using init script
+ - qwat_vx.x.x_data_and_structure_sample.backup : a full backup with data and structure.
+
+However, instructions remain valid for restoring data or structure dumps :
 
 Usage:
 
