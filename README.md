@@ -23,25 +23,27 @@ CASE 1 - If you developp or customize the data model, you need to rebuild the DB
 
   - first, initialize th DB structure using the procedure described here https://github.com/qwat/QWAT/blob/master/README.rst
 
-  - Then restore the data only file qwat_v1.x.x_data_only_sample using pgadmin  (backup file only) or with command below (backup using pg_restore or flat SQL file using psql:
- 
+  - Then restore the data only file qwat_v1.x.x_data_only_sample using pgadmin  (backup file only) or with command below (backup using `pg_restore`) or flat SQL file using psql:
+  
     ```
-        cd /location_to_dump_files
-        # pg_restore using custom format dump
-        pg_restore --dbname qwat --jobs=3 --data-only --disable-triggers  --no-owner --port 5432 qwat_v1.x.x_data_only_sample.backup 
-        
-        # OR using SQL flat file
-        psql -U postgres -f qwat_v1.x.x_data_only_sample.sql qwat
+    cd /location_to_dump_files
+    # pg_restore using custom format dump
+    pg_restore --dbname qwat --jobs=3 --data-only --disable-triggers  --no-owner --port 5432 qwat_v1.x.x_data_only_sample.backup 
+    
+    # OR using SQL flat file
+    psql -U postgres -f qwat_v1.x.x_data_only_sample.sql qwat   
     ```
    
 
 CASE 2 - you can also restore a full standalone database
 
+     ```
         pg_restore --dbname qwat --jobs=3 --disable-triggers  --no-owner --port 5432 qwat_v1.2.1_data_and_structure_sample.backup
         
         # OR using SQL flat file
         psql -U postgres -f qwat_v1.x.x_data_and_structure_sample.sql qwat
-
+     
+     ```
 
 
  - Now open the qgis project **qwat.qgs** from the main qwat repository (https://github.com/qwat/QWAT/tree/master/qgis-project)
