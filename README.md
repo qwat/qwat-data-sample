@@ -1,11 +1,12 @@
 # qwat-data-sample
 
-NEW: since 1.3.0 (2017-12-01)- data samples are found within each [data model release](https://github.com/qwat/qwat-data-model/releases). 
+**DISCLAIMER: since 1.3.0 (2017-12-01)- data samples are found within each [data model release](https://github.com/qwat/qwat-data-model/releases).**
 
-This repository holds now OLD data samples for the QWAT water distribution management project
+This repository holds now **OLD data** samples for the QWAT water distribution management project
 
  - qwat_vx.x.x_data_only_sample.backup : a data only backup, to be used after using init script
  - qwat_vx.x.x_data_and_structure_sample.backup : a full backup with data and structure.
+
 
 However, instructions remain valid for restoring data or structure dumps :
 
@@ -26,7 +27,7 @@ CASE 1 - If you developp or customize the data model, you need to rebuild the DB
  
     ```
         cd /location_to_dump_files
-        #pg_restore using custom format dump
+        # pg_restore using custom format dump
         pg_restore --dbname qwat --jobs=3 --data-only --disable-triggers  --no-owner --port 5432 qwat_v1.x.x_data_only_sample.backup 
         
         # OR using SQL flat file
