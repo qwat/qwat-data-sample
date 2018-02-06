@@ -28,7 +28,7 @@ CASE 1 - If you developp or customize the data model, you need to rebuild the DB
     ```
     cd /location_to_dump_files
     # pg_restore using custom format dump
-    pg_restore --dbname qwat --jobs=3 --data-only --disable-triggers  --no-owner --port 5432 qwat_v1.x.x_data_only_sample.backup 
+    pg_restore --dbname qwat --jobs=3 --data-only --disable-triggers  --no-owner --port 5432 qwat_v1.x.x_data_only_sample.backup
     
     # OR using SQL flat file
     psql -U postgres -f qwat_v1.x.x_data_only_sample.sql qwat   
