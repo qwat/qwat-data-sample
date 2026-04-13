@@ -21,7 +21,7 @@ psql -U postgres -d qwat -c 'create extension hstore;'
 
 CASE 1 - If you developp or customize the data model, you need to rebuild the DB from the sources:
 
-  - first, initialize th DB structure using the procedure described here https://github.com/qwat/QWAT/blob/master/README.rst
+  - first, initialize th DB structure using the procedure described here https://github.com/qwat/QWAT/blob/main/README.rst
 
   - Then restore the data only file qwat_v1.x.x_data_only_sample using pgadmin  (backup file only) or with command below (backup using `pg_restore`) or flat SQL file using psql:
   
@@ -46,7 +46,7 @@ CASE 2 - you can also restore a full standalone database
      ```
 
 
- - Now open the qgis project **qwat.qgs** from the main qwat repository (https://github.com/qwat/QWAT/tree/master/qgis-project)
+ - Now open the qgis project **qwat.qgs** from the main qwat repository (https://github.com/qwat/QWAT/tree/main/qgis-project)
 and you should see this screen:
 
 ![qwat-demo](qgis.png)
